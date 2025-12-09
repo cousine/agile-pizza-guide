@@ -15,13 +15,35 @@
   <body>
     <div class="scroll-indicator" id="scrollIndicator"></div>
 
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav" id="topNav">
+      <div class="top-nav-container">
+        <h2 class="top-nav-title">An Agile Product Development Workflow</h2>
+        <ul class="top-nav-list">
+          <li><a href="#overview" class="top-nav-link">Overview</a></li>
+          <li><a href="#roles" class="top-nav-link">Team Roles</a></li>
+          <li><a href="#ceremonies" class="top-nav-link">Ceremonies</a></li>
+          <li><a href="#sprint" class="top-nav-link">Sprint Cycle</a></li>
+          <li><a href="#artifacts" class="top-nav-link">Artifacts</a></li>
+          <li><a href="#work-items" class="top-nav-link">Work Items</a></li>
+          <li><a href="#documentation" class="top-nav-link">PRD & RFC</a></li>
+          <li><a href="#metrics" class="top-nav-link">Continuous Improvement</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <!-- Floating Table of Contents -->
     <div class="floating-toc" id="floatingToc">
-      <nav class="toc-menu active" id="tocMenu">
+      <button class="toc-toggle" id="tocToggle" aria-label="Toggle navigation menu">
+        <span class="toc-toggle-icon">☰</span>
+      </button>
+      <nav class="toc-menu collapsed" id="tocMenu">
         <div class="toc-header">
           <h3>Quick Navigation</h3>
+          <button class="toc-close" id="tocClose" aria-label="Close navigation menu">✕</button>
         </div>
         <ul class="toc-list">
+          <li><a href="#top" class="toc-link" id="tocTop">Top</a></li>
           <li><a href="#overview" class="toc-link">Overview</a></li>
           <li><a href="#roles" class="toc-link">Team Roles</a></li>
           <li><a href="#ceremonies" class="toc-link">Ceremonies</a></li>
@@ -1257,484 +1279,507 @@
           efficiency to drive continuous improvement.
         </p>
 
-        <div class="metrics-grid">
-          <div class="metric-card dora-card">
-            <div class="metric-header">
-              <span class="metric-icon">
-                <img src="assets/dora.png" alt="DORA" />
-              </span>
-              <h3>DORA Metrics</h3>
-              <span class="metric-badge">DevOps Performance</span>
-            </div>
-            <div class="metric-content">
-              <h4>What are DORA Metrics?</h4>
-              <p>
-                DORA (DevOps Research and Assessment) metrics are four key
-                measures that indicate the performance of software delivery
-                teams. Research shows these metrics are strong predictors of
-                organizational performance.
-              </p>
+        <div class="metrics-scroll-wrapper">
+          <div class="metrics-scroll-container">
+            <button
+              class="metrics-scroll-btn metrics-scroll-btn-left"
+              id="metricsScrollLeft"
+              aria-label="Scroll to previous metric"
+            >
+              <img src="assets/arrow.png" alt="" />
+            </button>
+            <button
+              class="metrics-scroll-btn metrics-scroll-btn-right"
+              id="metricsScrollRight"
+              aria-label="Scroll to next metric"
+            >
+              <img src="assets/arrow.png" alt="" />
+            </button>
+          </div>
+          <div class="metrics-grid">
+            <div class="metric-card dora-card">
+              <div class="metric-header">
+                <span class="metric-icon">
+                  <img src="assets/dora.png" alt="DORA" />
+                </span>
+                <h3>DORA Metrics</h3>
+                <span class="metric-badge">DevOps Performance</span>
+              </div>
+              <div class="metric-content">
+                <h4>What are DORA Metrics?</h4>
+                <p>
+                  DORA (DevOps Research and Assessment) metrics are four key
+                  measures that indicate the performance of software delivery
+                  teams. Research shows these metrics are strong predictors of
+                  organizational performance.
+                </p>
 
-              <div class="metric-list">
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Deployment Frequency</strong>
+                <div class="metric-list">
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Deployment Frequency</strong>
+                    </div>
+                    <p>How often does your team deploy code to production?</p>
+                    <div class="metric-target">
+                      <span class="target-label">Elite:</span> Multiple
+                      deployments per day<br />
+                      <span class="target-label">High:</span> Between once per
+                      day and once per week<br />
+                      <span class="target-label">Medium:</span> Between once per
+                      week and once per month<br />
+                      <span class="target-label">Low:</span> Less than once per
+                      month
+                    </div>
                   </div>
-                  <p>How often does your team deploy code to production?</p>
-                  <div class="metric-target">
-                    <span class="target-label">Elite:</span> Multiple
-                    deployments per day<br />
-                    <span class="target-label">High:</span> Between once per day
-                    and once per week<br />
-                    <span class="target-label">Medium:</span> Between once per
-                    week and once per month<br />
-                    <span class="target-label">Low:</span> Less than once per
-                    month
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Lead Time for Changes</strong>
+                    </div>
+                    <p>
+                      How long does it take from code commit to code running in
+                      production?
+                    </p>
+                    <div class="metric-target">
+                      <span class="target-label">Elite:</span> Less than one
+                      hour<br />
+                      <span class="target-label">High:</span> Between one day
+                      and one week<br />
+                      <span class="target-label">Medium:</span> Between one week
+                      and one month<br />
+                      <span class="target-label">Low:</span> More than one month
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Change Failure Rate</strong>
+                    </div>
+                    <p>
+                      What percentage of deployments cause a failure in
+                      production requiring hotfix or rollback?
+                    </p>
+                    <div class="metric-target">
+                      <span class="target-label">Elite:</span> 0-15%<br />
+                      <span class="target-label">High:</span> 16-30%<br />
+                      <span class="target-label">Medium:</span> 31-45%<br />
+                      <span class="target-label">Low:</span> 46-100%
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Time to Restore Service</strong>
+                    </div>
+                    <p>
+                      How long does it take to recover from a failure in
+                      production?
+                    </p>
+                    <div class="metric-target">
+                      <span class="target-label">Elite:</span> Less than one
+                      hour<br />
+                      <span class="target-label">High:</span> Less than one
+                      day<br />
+                      <span class="target-label">Medium:</span> Between one day
+                      and one week<br />
+                      <span class="target-label">Low:</span> More than one week
+                    </div>
                   </div>
                 </div>
 
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Lead Time for Changes</strong>
-                  </div>
-                  <p>
-                    How long does it take from code commit to code running in
-                    production?
-                  </p>
-                  <div class="metric-target">
-                    <span class="target-label">Elite:</span> Less than one
-                    hour<br />
-                    <span class="target-label">High:</span> Between one day and
-                    one week<br />
-                    <span class="target-label">Medium:</span> Between one week
-                    and one month<br />
-                    <span class="target-label">Low:</span> More than one month
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Change Failure Rate</strong>
-                  </div>
-                  <p>
-                    What percentage of deployments cause a failure in production
-                    requiring hotfix or rollback?
-                  </p>
-                  <div class="metric-target">
-                    <span class="target-label">Elite:</span> 0-15%<br />
-                    <span class="target-label">High:</span> 16-30%<br />
-                    <span class="target-label">Medium:</span> 31-45%<br />
-                    <span class="target-label">Low:</span> 46-100%
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Time to Restore Service</strong>
-                  </div>
-                  <p>
-                    How long does it take to recover from a failure in
-                    production?
-                  </p>
-                  <div class="metric-target">
-                    <span class="target-label">Elite:</span> Less than one
-                    hour<br />
-                    <span class="target-label">High:</span> Less than one day<br />
-                    <span class="target-label">Medium:</span> Between one day
-                    and one week<br />
-                    <span class="target-label">Low:</span> More than one week
-                  </div>
+                <div class="metric-insight">
+                  <strong>Why These Matter:</strong> DORA metrics measure both
+                  throughput (deployment frequency, lead time) and stability
+                  (change failure rate, time to restore). High-performing teams
+                  excel at both, showing that speed and stability are not
+                  trade-offs.
                 </div>
               </div>
+            </div>
 
-              <div class="metric-insight">
-                <strong>Why These Matter:</strong> DORA metrics measure both
-                throughput (deployment frequency, lead time) and stability
-                (change failure rate, time to restore). High-performing teams
-                excel at both, showing that speed and stability are not
-                trade-offs.
+            <div class="metric-card toc-card">
+              <div class="metric-header">
+                <span class="metric-icon">
+                  <img src="assets/constraints.png" alt="Constraints" />
+                </span>
+                <h3>Theory of Constraints Metrics</h3>
+                <span class="metric-badge">Bottleneck Analysis</span>
+              </div>
+              <div class="metric-content">
+                <h4>What is Theory of Constraints?</h4>
+                <p>
+                  Theory of Constraints (ToC) focuses on identifying and
+                  managing the bottleneck (constraint) in your system. The
+                  constraint determines the maximum throughput of your entire
+                  delivery process.
+                </p>
+
+                <h4>Key Principles:</h4>
+                <ul>
+                  <li>
+                    Every system has at least one constraint limiting its
+                    performance
+                  </li>
+                  <li>
+                    Improving anything other than the constraint is an illusion
+                  </li>
+                  <li>The constraint determines overall system throughput</li>
+                </ul>
+
+                <div class="metric-list">
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Throughput</strong>
+                    </div>
+                    <p>
+                      The rate at which the system generates value (e.g.,
+                      completed stories per sprint, features shipped per month).
+                    </p>
+                    <div class="metric-example">
+                      <strong>Example:</strong> If your team completes 20 story
+                      points per sprint consistently, your throughput is 20
+                      points/sprint.
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Work In Progress (WIP)</strong>
+                    </div>
+                    <p>
+                      The number of items currently being worked on. High WIP
+                      often indicates a constraint or bottleneck.
+                    </p>
+                    <div class="metric-example">
+                      <strong>Watch for:</strong> Work piling up before certain
+                      stages (e.g., code review, QA, deployment) indicates a
+                      constraint at that stage.
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Constraint Utilization</strong>
+                    </div>
+                    <p>
+                      How effectively is the bottleneck being used? Any idle
+                      time at the constraint wastes total system capacity.
+                    </p>
+                    <div class="metric-example">
+                      <strong>Goal:</strong> Keep the constraint at 100%
+                      utilization. Protect it from starvation by ensuring
+                      upstream work is always ready.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="metric-insight">
+                  <strong>How to Apply:</strong> Identify your constraint (where
+                  work queues up), ensure it's never idle, subordinate
+                  everything else to the constraint, elevate the constraint's
+                  capacity, and repeat as the constraint moves.
+                </div>
+              </div>
+            </div>
+
+            <div class="metric-card kanban-card">
+              <div class="metric-header">
+                <span class="metric-icon">
+                  <img src="assets/flow.png" alt="Flow" />
+                </span>
+                <h3>Kanban Flow Metrics</h3>
+                <span class="metric-badge">Flow Efficiency</span>
+              </div>
+              <div class="metric-content">
+                <h4>What are Kanban Metrics?</h4>
+                <p>
+                  Kanban metrics focus on flow efficiency and predictability.
+                  They help teams understand how work moves through their system
+                  and identify opportunities for improvement.
+                </p>
+
+                <div class="metric-list">
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Cycle Time</strong>
+                    </div>
+                    <p>
+                      The total time from when work starts until it's completed
+                      and delivered. This is your primary measure of speed.
+                    </p>
+                    <div class="metric-example">
+                      <strong>Measure:</strong> From "In Progress" to "Done"<br />
+                      <strong>Track:</strong> Average, median, and percentiles
+                      (85th, 95th)
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Lead Time</strong>
+                    </div>
+                    <p>
+                      The total time from when a request is made until it's
+                      delivered. Includes time waiting to start.
+                    </p>
+                    <div class="metric-example">
+                      <strong>Measure:</strong> From "Backlog" to "Done"<br />
+                      <strong>Customer perspective:</strong> This is what users
+                      experience
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Work In Progress (WIP)</strong>
+                    </div>
+                    <p>
+                      The number of items actively being worked on. Lower WIP
+                      typically leads to faster cycle times.
+                    </p>
+                    <div class="metric-example">
+                      <strong>Little's Law:</strong> Average Cycle Time = WIP /
+                      Throughput<br />
+                      <strong>Action:</strong> Set WIP limits per column to
+                      reduce context switching
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Throughput</strong>
+                    </div>
+                    <p>
+                      The number of items completed per unit of time. Measure of
+                      delivery rate.
+                    </p>
+                    <div class="metric-example">
+                      <strong>Track:</strong> Items per week/sprint<br />
+                      <strong>Use for:</strong> Capacity planning and
+                      forecasting
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Flow Efficiency</strong>
+                    </div>
+                    <p>
+                      The percentage of time work is actively being worked on
+                      vs. waiting. Most teams have 10-20% flow efficiency.
+                    </p>
+                    <div class="metric-example">
+                      <strong>Formula:</strong> (Active Time / Total Lead Time)
+                      × 100<br />
+                      <strong>Improve by:</strong> Reducing wait times,
+                      handoffs, and blockers
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Blocked Time</strong>
+                    </div>
+                    <p>
+                      How much time items spend blocked or waiting on external
+                      dependencies.
+                    </p>
+                    <div class="metric-example">
+                      <strong>Track:</strong> Number of blocked items, average
+                      block duration<br />
+                      <strong>Use to:</strong> Identify systemic issues and
+                      external dependencies
+                    </div>
+                  </div>
+                </div>
+
+                <div class="metric-insight">
+                  <strong>Cumulative Flow Diagram (CFD):</strong> Visualize WIP,
+                  throughput, and cycle time trends over time. A stable CFD
+                  shows consistent flow; expanding bands indicate growing WIP or
+                  bottlenecks.
+                </div>
+              </div>
+            </div>
+
+            <div class="metric-card scrum-card">
+              <div class="metric-header">
+                <span class="metric-icon">
+                  <img src="assets/sprint_metrics.png" alt="Sprint Metrics" />
+                </span>
+                <h3>Sprint Metrics</h3>
+                <span class="metric-badge">Planning & Delivery</span>
+              </div>
+              <div class="metric-content">
+                <h4>What are Sprint Metrics?</h4>
+                <p>
+                  Sprint metrics help teams plan capacity, track delivery
+                  consistency, and improve estimation accuracy. These metrics
+                  support velocity-based planning and predictable delivery.
+                </p>
+
+                <div class="metric-list">
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Velocity</strong>
+                    </div>
+                    <p>
+                      The average number of story points completed per sprint.
+                      Used for capacity planning and forecasting.
+                    </p>
+                    <div class="metric-example">
+                      <strong>Calculate:</strong> Sum story points completed
+                      over last 3-5 sprints, then divide by number of sprints<br />
+                      <strong>Use for:</strong> Planning how much work to commit
+                      to in upcoming sprints<br />
+                      <strong>Note:</strong> Velocity is team-specific and
+                      should never be compared across teams
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Commitment vs Completion</strong>
+                    </div>
+                    <p>
+                      Comparison between story points committed at sprint
+                      planning vs actually completed by sprint end.
+                    </p>
+                    <div class="metric-example">
+                      <strong>Ideal:</strong> 90-100% completion rate
+                      consistently<br />
+                      <strong>If consistently low:</strong> Team is
+                      over-committing or stories are poorly estimated<br />
+                      <strong>If consistently 100%:</strong> Team may be
+                      under-committing and could take on more
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Sprint Goal Success Rate</strong>
+                    </div>
+                    <p>
+                      Percentage of sprints where the sprint goal was achieved,
+                      regardless of all stories being completed.
+                    </p>
+                    <div class="metric-example">
+                      <strong>Track:</strong> Did we achieve what we set out to
+                      accomplish?<br />
+                      <strong>Why it matters:</strong> Focuses on outcomes over
+                      output<br />
+                      <strong>Target:</strong> 80%+ sprint goal achievement
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Story Point Distribution</strong>
+                    </div>
+                    <p>
+                      Breakdown of completed stories by size (e.g., 1, 2, 3, 5,
+                      8, 13 points).
+                    </p>
+                    <div class="metric-example">
+                      <strong>Watch for:</strong> Too many large stories may
+                      indicate insufficient refinement<br />
+                      <strong>Healthy mix:</strong> Majority of stories should
+                      be small to medium (1-5 points)<br />
+                      <strong>Action:</strong> Break down 8+ point stories
+                      during refinement
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Scope Change</strong>
+                    </div>
+                    <p>
+                      Number of stories added or removed mid-sprint after
+                      planning.
+                    </p>
+                    <div class="metric-example">
+                      <strong>Track:</strong> How often does scope change during
+                      the sprint?<br />
+                      <strong>Frequent changes indicate:</strong> Poor planning,
+                      unclear priorities, or external disruptions<br />
+                      <strong>Goal:</strong> Minimize scope changes to maintain
+                      team focus
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Estimation Accuracy</strong>
+                    </div>
+                    <p>
+                      How closely actual effort matches estimated story points
+                      over time.
+                    </p>
+                    <div class="metric-example">
+                      <strong>Improve through:</strong> Regular refinement
+                      sessions and retrospective discussions<br />
+                      <strong>Watch for:</strong> Consistently over or
+                      under-estimated story sizes<br />
+                      <strong>Remember:</strong> Story points are relative
+                      sizing, not precise time estimates
+                    </div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-name">
+                      <span class="metric-dot"></span>
+                      <strong>Sprint Burndown</strong>
+                    </div>
+                    <p>
+                      Visual chart showing remaining work (story points)
+                      throughout the sprint.
+                    </p>
+                    <div class="metric-example">
+                      <strong>Ideal pattern:</strong> Steady downward slope from
+                      sprint start to end<br />
+                      <strong>Flat line:</strong> Work isn't being completed,
+                      may indicate blockers<br />
+                      <strong>Spike up:</strong> Scope was added mid-sprint<br />
+                      <strong>Use daily:</strong> Quick visual check during
+                      standup
+                    </div>
+                  </div>
+                </div>
+
+                <div class="metric-insight">
+                  <strong>Velocity Best Practices:</strong> Don't use velocity
+                  as a performance metric or to compare teams. Velocity
+                  naturally varies as team composition, technology, and story
+                  point calibration differ. Use it solely for the team's own
+                  capacity planning and to identify trends in their delivery
+                  patterns.
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="metric-card toc-card">
-            <div class="metric-header">
-              <span class="metric-icon">
-                <img src="assets/constraints.png" alt="Constraints" />
-              </span>
-              <h3>Theory of Constraints Metrics</h3>
-              <span class="metric-badge">Bottleneck Analysis</span>
-            </div>
-            <div class="metric-content">
-              <h4>What is Theory of Constraints?</h4>
-              <p>
-                Theory of Constraints (ToC) focuses on identifying and managing
-                the bottleneck (constraint) in your system. The constraint
-                determines the maximum throughput of your entire delivery
-                process.
-              </p>
-
-              <h4>Key Principles:</h4>
-              <ul>
-                <li>
-                  Every system has at least one constraint limiting its
-                  performance
-                </li>
-                <li>
-                  Improving anything other than the constraint is an illusion
-                </li>
-                <li>The constraint determines overall system throughput</li>
-              </ul>
-
-              <div class="metric-list">
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Throughput</strong>
-                  </div>
-                  <p>
-                    The rate at which the system generates value (e.g.,
-                    completed stories per sprint, features shipped per month).
-                  </p>
-                  <div class="metric-example">
-                    <strong>Example:</strong> If your team completes 20 story
-                    points per sprint consistently, your throughput is 20
-                    points/sprint.
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Work In Progress (WIP)</strong>
-                  </div>
-                  <p>
-                    The number of items currently being worked on. High WIP
-                    often indicates a constraint or bottleneck.
-                  </p>
-                  <div class="metric-example">
-                    <strong>Watch for:</strong> Work piling up before certain
-                    stages (e.g., code review, QA, deployment) indicates a
-                    constraint at that stage.
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Constraint Utilization</strong>
-                  </div>
-                  <p>
-                    How effectively is the bottleneck being used? Any idle time
-                    at the constraint wastes total system capacity.
-                  </p>
-                  <div class="metric-example">
-                    <strong>Goal:</strong> Keep the constraint at 100%
-                    utilization. Protect it from starvation by ensuring upstream
-                    work is always ready.
-                  </div>
-                </div>
-              </div>
-
-              <div class="metric-insight">
-                <strong>How to Apply:</strong> Identify your constraint (where
-                work queues up), ensure it's never idle, subordinate everything
-                else to the constraint, elevate the constraint's capacity, and
-                repeat as the constraint moves.
-              </div>
-            </div>
-          </div>
-
-          <div class="metric-card kanban-card">
-            <div class="metric-header">
-              <span class="metric-icon">
-                <img src="assets/flow.png" alt="Flow" />
-              </span>
-              <h3>Kanban Flow Metrics</h3>
-              <span class="metric-badge">Flow Efficiency</span>
-            </div>
-            <div class="metric-content">
-              <h4>What are Kanban Metrics?</h4>
-              <p>
-                Kanban metrics focus on flow efficiency and predictability. They
-                help teams understand how work moves through their system and
-                identify opportunities for improvement.
-              </p>
-
-              <div class="metric-list">
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Cycle Time</strong>
-                  </div>
-                  <p>
-                    The total time from when work starts until it's completed
-                    and delivered. This is your primary measure of speed.
-                  </p>
-                  <div class="metric-example">
-                    <strong>Measure:</strong> From "In Progress" to "Done"<br />
-                    <strong>Track:</strong> Average, median, and percentiles
-                    (85th, 95th)
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Lead Time</strong>
-                  </div>
-                  <p>
-                    The total time from when a request is made until it's
-                    delivered. Includes time waiting to start.
-                  </p>
-                  <div class="metric-example">
-                    <strong>Measure:</strong> From "Backlog" to "Done"<br />
-                    <strong>Customer perspective:</strong> This is what users
-                    experience
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Work In Progress (WIP)</strong>
-                  </div>
-                  <p>
-                    The number of items actively being worked on. Lower WIP
-                    typically leads to faster cycle times.
-                  </p>
-                  <div class="metric-example">
-                    <strong>Little's Law:</strong> Average Cycle Time = WIP /
-                    Throughput<br />
-                    <strong>Action:</strong> Set WIP limits per column to reduce
-                    context switching
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Throughput</strong>
-                  </div>
-                  <p>
-                    The number of items completed per unit of time. Measure of
-                    delivery rate.
-                  </p>
-                  <div class="metric-example">
-                    <strong>Track:</strong> Items per week/sprint<br />
-                    <strong>Use for:</strong> Capacity planning and forecasting
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Flow Efficiency</strong>
-                  </div>
-                  <p>
-                    The percentage of time work is actively being worked on vs.
-                    waiting. Most teams have 10-20% flow efficiency.
-                  </p>
-                  <div class="metric-example">
-                    <strong>Formula:</strong> (Active Time / Total Lead Time) ×
-                    100<br />
-                    <strong>Improve by:</strong> Reducing wait times, handoffs,
-                    and blockers
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Blocked Time</strong>
-                  </div>
-                  <p>
-                    How much time items spend blocked or waiting on external
-                    dependencies.
-                  </p>
-                  <div class="metric-example">
-                    <strong>Track:</strong> Number of blocked items, average
-                    block duration<br />
-                    <strong>Use to:</strong> Identify systemic issues and
-                    external dependencies
-                  </div>
-                </div>
-              </div>
-
-              <div class="metric-insight">
-                <strong>Cumulative Flow Diagram (CFD):</strong> Visualize WIP,
-                throughput, and cycle time trends over time. A stable CFD shows
-                consistent flow; expanding bands indicate growing WIP or
-                bottlenecks.
-              </div>
-            </div>
-          </div>
-
-          <div class="metric-card scrum-card">
-            <div class="metric-header">
-              <span class="metric-icon">
-                <img src="assets/sprint_metrics.png" alt="Sprint Metrics" />
-              </span>
-              <h3>Sprint Metrics</h3>
-              <span class="metric-badge">Planning & Delivery</span>
-            </div>
-            <div class="metric-content">
-              <h4>What are Sprint Metrics?</h4>
-              <p>
-                Sprint metrics help teams plan capacity, track delivery
-                consistency, and improve estimation accuracy. These metrics
-                support velocity-based planning and predictable delivery.
-              </p>
-
-              <div class="metric-list">
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Velocity</strong>
-                  </div>
-                  <p>
-                    The average number of story points completed per sprint.
-                    Used for capacity planning and forecasting.
-                  </p>
-                  <div class="metric-example">
-                    <strong>Calculate:</strong> Sum story points completed over
-                    last 3-5 sprints, then divide by number of sprints<br />
-                    <strong>Use for:</strong> Planning how much work to commit
-                    to in upcoming sprints<br />
-                    <strong>Note:</strong> Velocity is team-specific and should
-                    never be compared across teams
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Commitment vs Completion</strong>
-                  </div>
-                  <p>
-                    Comparison between story points committed at sprint planning
-                    vs actually completed by sprint end.
-                  </p>
-                  <div class="metric-example">
-                    <strong>Ideal:</strong> 90-100% completion rate
-                    consistently<br />
-                    <strong>If consistently low:</strong> Team is
-                    over-committing or stories are poorly estimated<br />
-                    <strong>If consistently 100%:</strong> Team may be
-                    under-committing and could take on more
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Sprint Goal Success Rate</strong>
-                  </div>
-                  <p>
-                    Percentage of sprints where the sprint goal was achieved,
-                    regardless of all stories being completed.
-                  </p>
-                  <div class="metric-example">
-                    <strong>Track:</strong> Did we achieve what we set out to
-                    accomplish?<br />
-                    <strong>Why it matters:</strong> Focuses on outcomes over
-                    output<br />
-                    <strong>Target:</strong> 80%+ sprint goal achievement
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Story Point Distribution</strong>
-                  </div>
-                  <p>
-                    Breakdown of completed stories by size (e.g., 1, 2, 3, 5, 8,
-                    13 points).
-                  </p>
-                  <div class="metric-example">
-                    <strong>Watch for:</strong> Too many large stories may
-                    indicate insufficient refinement<br />
-                    <strong>Healthy mix:</strong> Majority of stories should be
-                    small to medium (1-5 points)<br />
-                    <strong>Action:</strong> Break down 8+ point stories during
-                    refinement
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Scope Change</strong>
-                  </div>
-                  <p>
-                    Number of stories added or removed mid-sprint after
-                    planning.
-                  </p>
-                  <div class="metric-example">
-                    <strong>Track:</strong> How often does scope change during
-                    the sprint?<br />
-                    <strong>Frequent changes indicate:</strong> Poor planning,
-                    unclear priorities, or external disruptions<br />
-                    <strong>Goal:</strong> Minimize scope changes to maintain
-                    team focus
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Estimation Accuracy</strong>
-                  </div>
-                  <p>
-                    How closely actual effort matches estimated story points
-                    over time.
-                  </p>
-                  <div class="metric-example">
-                    <strong>Improve through:</strong> Regular refinement
-                    sessions and retrospective discussions<br />
-                    <strong>Watch for:</strong> Consistently over or
-                    under-estimated story sizes<br />
-                    <strong>Remember:</strong> Story points are relative sizing,
-                    not precise time estimates
-                  </div>
-                </div>
-
-                <div class="metric-item">
-                  <div class="metric-name">
-                    <span class="metric-dot"></span>
-                    <strong>Sprint Burndown</strong>
-                  </div>
-                  <p>
-                    Visual chart showing remaining work (story points)
-                    throughout the sprint.
-                  </p>
-                  <div class="metric-example">
-                    <strong>Ideal pattern:</strong> Steady downward slope from
-                    sprint start to end<br />
-                    <strong>Flat line:</strong> Work isn't being completed, may
-                    indicate blockers<br />
-                    <strong>Spike up:</strong> Scope was added mid-sprint<br />
-                    <strong>Use daily:</strong> Quick visual check during
-                    standup
-                  </div>
-                </div>
-              </div>
-
-              <div class="metric-insight">
-                <strong>Velocity Best Practices:</strong> Don't use velocity as
-                a performance metric or to compare teams. Velocity naturally
-                varies as team composition, technology, and story point
-                calibration differ. Use it solely for the team's own capacity
-                planning and to identify trends in their delivery patterns.
-              </div>
-            </div>
-          </div>
+          <!-- end metrics-grid -->
         </div>
+        <!-- end metrics-scroll-wrapper -->
 
         <div class="metrics-summary">
           <h3
@@ -1804,87 +1849,16 @@
       </section>
 
       <footer>
-        <p>Built to help product teams implement effective agile workflows</p>
+        <p>
+          Copyright (c) 2025 Omar Mekky (<a
+            href="https://cousine.me"
+            target="_blank"
+            >cousine</a
+          >). All Rights Reserved.
+        </p>
       </footer>
     </div>
 
-    <script>
-      // Scroll indicator
-      window.addEventListener("scroll", () => {
-        const scrollIndicator = document.getElementById("scrollIndicator");
-        const windowHeight =
-          document.documentElement.scrollHeight -
-          document.documentElement.clientHeight;
-        const scrolled = (window.scrollY / windowHeight) * 100;
-        scrollIndicator.style.width = scrolled + "%";
-      });
-
-      // Floating TOC functionality
-      const tocLinks = document.querySelectorAll(".toc-link");
-
-      // Smooth scroll to section
-      tocLinks.forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          const targetId = link.getAttribute("href");
-          const targetSection = document.querySelector(targetId);
-
-          if (targetSection) {
-            targetSection.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        });
-      });
-
-      // Highlight active section in TOC
-      const sections = document.querySelectorAll("section[id]");
-
-      const highlightActiveSection = () => {
-        const scrollPosition = window.scrollY + 150;
-
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
-          const sectionId = section.getAttribute("id");
-
-          if (
-            scrollPosition >= sectionTop &&
-            scrollPosition < sectionTop + sectionHeight
-          ) {
-            tocLinks.forEach((link) => {
-              link.classList.remove("active");
-              if (link.getAttribute("href") === `#${sectionId}`) {
-                link.classList.add("active");
-              }
-            });
-          }
-        });
-      };
-
-      window.addEventListener("scroll", highlightActiveSection);
-      highlightActiveSection(); // Initial call
-
-      // Add entrance animations on scroll
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -100px 0px",
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll("section").forEach((section) => {
-        observer.observe(section);
-      });
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
-
