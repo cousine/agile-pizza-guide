@@ -773,6 +773,27 @@ h2::before {
   }
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .doc-grid {
+    gap: 20px;
+  }
+
+  header .pizza {
+    position: static;
+    height: 200px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  header {
+    padding-top: 40px;
+  }
+}
+
 /* Metrics Section */
 .metrics-grid {
   display: flex;
