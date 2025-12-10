@@ -1174,9 +1174,17 @@ h2::before {
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 1400px) {
+  .metrics-grid {
+    flex-direction: column;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    height: auto !important;
+  }
+
   .metric-card {
-    min-width: 100%;
+    min-width: auto;
+    width: 100%;
   }
 }
 
@@ -1555,9 +1563,4 @@ footer {
   background: var(--accent);
 }
 
-/* Mobile responsive TOC - hide on smaller screens */
-@media (max-width: 1400px) {
-  .floating-toc {
-    display: none;
-  }
-}
+
