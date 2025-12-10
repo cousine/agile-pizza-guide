@@ -315,3 +315,322 @@ if (metricsGrid && scrollLeftBtn && scrollRightBtn) {
   // Update after images load
   window.addEventListener("load", updateGridHeight);
 }
+
+// ===== Cookie Consent & Analytics Tracking =====
+
+// Cookie consent management
+const cookieConsent = document.getElementById('cookieConsent');
+const cookieAccept = document.getElementById('cookieAccept');
+const cookieDecline = document.getElementById('cookieDecline');
+const cookieModal = document.getElementById('cookieModal');
+const cookieLearnMore = document.getElementById('cookieLearnMore');
+const cookieModalClose = document.getElementById('cookieModalClose');
+const cookieModalAccept = document.getElementById('cookieModalAccept');
+const cookieSettings = document.getElementById('cookieSettings');
+
+// Check if user has already made a choice
+const getCookieConsent = () => {
+  return localStorage.getItem('cookieConsent');
+};
+
+const setCookieConsent = (value) => {
+  localStorage.setItem('cookieConsent', value);
+};
+
+const grantConsent = () => {
+  if (typeof gtag !== 'undefined') {
+    gtag('consent', 'update', {
+      analytics_storage: 'granted'
+    });
+  }
+};
+
+const denyConsent = () => {
+  if (typeof gtag !== 'undefined') {
+    gtag('consent', 'update', {
+      analytics_storage: 'denied'
+    });
+  }
+};
+
+// Show banner if no consent choice has been made
+const consent = getCookieConsent();
+if (!consent) {
+  setTimeout(() => {
+    cookieConsent.classList.add('show');
+  }, 1000);
+} else if (consent === 'accepted') {
+  grantConsent();
+  cookieSettings.classList.add('show');
+} else {
+  cookieSettings.classList.add('show');
+}
+
+// Accept button handler
+const handleAccept = () => {
+  setCookieConsent('accepted');
+  grantConsent();
+  cookieConsent.classList.remove('show');
+  cookieModal.classList.remove('show');
+  cookieSettings.classList.add('show');
+  
+  // Track consent acceptance
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'cookie_consent_accepted', {
+      event_category: 'engagement',
+      event_label: 'Cookie Consent'
+    });
+  }
+};
+
+// Decline button handler
+const handleDecline = () => {
+  setCookieConsent('declined');
+  denyConsent();
+  cookieConsent.classList.remove('show');
+  cookieSettings.classList.add('show');
+  
+  // Track consent decline (anonymously)
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'cookie_consent_declined', {
+      event_category: 'engagement',
+      event_label: 'Cookie Consent'
+    });
+  }
+};
+
+// Event listeners
+if (cookieAccept) cookieAccept.addEventListener('click', handleAccept);
+if (cookieDecline) cookieDecline.addEventListener('click', handleDecline);
+if (cookieModalAccept) cookieModalAccept.addEventListener('click', handleAccept);
+
+// Learn more modal
+if (cookieLearnMore) {
+  cookieLearnMore.addEventListener('click', (e) => {
+    e.preventDefault();
+    cookieModal.classList.add('show');
+  });
+}
+
+if (cookieModalClose) {
+  cookieModalClose.addEventListener('click', () => {
+    cookieModal.classList.remove('show');
+  });
+}
+
+// Close modal on outside click
+if (cookieModal) {
+  cookieModal.addEventListener('click', (e) => {
+    if (e.target === cookieModal) {
+      cookieModal.classList.remove('show');
+    }
+  });
+}
+
+// Settings button - reopen consent banner
+if (cookieSettings) {
+  cookieSettings.addEventListener('click', () => {
+    cookieConsent.classList.add('show');
+  });
+}
+
+// ===== Custom Analytics Tracking =====
+
+// Helper function to safely track events
+const trackEvent = (eventName, params = {}) => {
+  if (typeof gtag !== 'undefined' && getCookieConsent() === 'accepted') {
+    gtag('event', eventName, params);
+  }
+};
+
+// 1. Section View Tracking (when user scrolls to a section)
+const trackSectionViews = () => {
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const sectionId = entry.target.getAttribute('id');
+        const sectionTitle = entry.target.querySelector('h2')?.textContent || sectionId;
+        
+        trackEvent('section_view', {
+          event_category: 'engagement',
+          event_label: sectionTitle,
+          section_id: sectionId
+        });
+      }
+    });
+  }, {
+    threshold: 0.5,
+    rootMargin: '0px'
+  });
+
+  // Observe all sections
+  sections.forEach((section) => {
+    sectionObserver.observe(section);
+  });
+};
+
+// 2. Navigation & TOC Click Tracking
+const trackNavigationClicks = () => {
+  // Track top nav clicks
+  topNavLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      const targetSection = link.getAttribute('href');
+      const linkText = link.textContent;
+      
+      trackEvent('navigation_click', {
+        event_category: 'navigation',
+        event_label: linkText,
+        link_target: targetSection,
+        navigation_type: 'top_nav'
+      });
+    });
+  });
+
+  // Track TOC clicks
+  tocLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      const targetSection = link.getAttribute('href');
+      const linkText = link.textContent;
+      
+      trackEvent('navigation_click', {
+        event_category: 'navigation',
+        event_label: linkText,
+        link_target: targetSection,
+        navigation_type: 'toc'
+      });
+    });
+  });
+
+  // Track TOC open/close
+  if (tocToggle) {
+    tocToggle.addEventListener('click', () => {
+      trackEvent('toc_opened', {
+        event_category: 'interaction',
+        event_label: 'Table of Contents'
+      });
+    });
+  }
+
+  if (tocClose) {
+    tocClose.addEventListener('click', () => {
+      trackEvent('toc_closed', {
+        event_category: 'interaction',
+        event_label: 'Table of Contents'
+      });
+    });
+  }
+
+  // Track metrics carousel interactions
+  if (scrollLeftBtn) {
+    scrollLeftBtn.addEventListener('click', () => {
+      trackEvent('metrics_scroll', {
+        event_category: 'interaction',
+        event_label: 'Metrics Carousel',
+        scroll_direction: 'left'
+      });
+    });
+  }
+
+  if (scrollRightBtn) {
+    scrollRightBtn.addEventListener('click', () => {
+      trackEvent('metrics_scroll', {
+        event_category: 'interaction',
+        event_label: 'Metrics Carousel',
+        scroll_direction: 'right'
+      });
+    });
+  }
+};
+
+// 3. Engagement Metrics - Time spent on page
+const trackEngagementTime = () => {
+  let startTime = Date.now();
+  let lastActivityTime = Date.now();
+  let isActive = true;
+
+  // Track time when user leaves or closes tab
+  const sendEngagementTime = () => {
+    const totalTime = Math.round((Date.now() - startTime) / 1000); // in seconds
+    const activeTime = Math.round((lastActivityTime - startTime) / 1000);
+    
+    trackEvent('engagement_time', {
+      event_category: 'engagement',
+      event_label: 'Time on Page',
+      value: totalTime,
+      active_time: activeTime
+    });
+  };
+
+  // Track activity
+  const trackActivity = () => {
+    lastActivityTime = Date.now();
+    isActive = true;
+  };
+
+  // Listen for user activity
+  ['scroll', 'click', 'keypress', 'mousemove'].forEach((eventType) => {
+    document.addEventListener(eventType, trackActivity);
+  });
+
+  // Send engagement time on page exit
+  window.addEventListener('beforeunload', sendEngagementTime);
+
+  // Send periodic updates every 30 seconds
+  setInterval(() => {
+    if (isActive) {
+      sendEngagementTime();
+      isActive = false; // Reset until next activity
+    }
+  }, 30000);
+};
+
+// 4. Outbound Link Tracking
+const trackOutboundLinks = () => {
+  // Track all external links (particularly the footer link to cousine.me)
+  document.querySelectorAll('a[href^="http"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      const linkText = link.textContent.trim();
+      
+      // Check if it's truly an outbound link (not same domain)
+      if (!href.includes(window.location.hostname)) {
+        trackEvent('outbound_link_click', {
+          event_category: 'outbound',
+          event_label: linkText,
+          link_url: href
+        });
+      }
+    });
+  });
+};
+
+// Initialize all tracking (only if consent is given)
+if (getCookieConsent() === 'accepted') {
+  trackSectionViews();
+  trackNavigationClicks();
+  trackEngagementTime();
+  trackOutboundLinks();
+}
+
+// Also initialize tracking when user accepts consent
+const originalHandleAccept = handleAccept;
+const handleAcceptWithTracking = () => {
+  originalHandleAccept();
+  // Initialize tracking after consent
+  setTimeout(() => {
+    trackSectionViews();
+    trackNavigationClicks();
+    trackEngagementTime();
+    trackOutboundLinks();
+  }, 100);
+};
+
+// Replace the event listeners with the new handler
+if (cookieAccept) {
+  cookieAccept.removeEventListener('click', handleAccept);
+  cookieAccept.addEventListener('click', handleAcceptWithTracking);
+}
+if (cookieModalAccept) {
+  cookieModalAccept.removeEventListener('click', handleAccept);
+  cookieModalAccept.addEventListener('click', handleAcceptWithTracking);
+}

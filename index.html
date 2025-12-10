@@ -3,17 +3,217 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>An Agile Product Development Workflow</title>
+
+    <!-- SEO Meta Tags -->
+    <title>
+      Agile Product Development Workflow Guide | Scrum, Kanban & DevOps Best
+      Practices
+    </title>
+    <meta
+      name="description"
+      content="Comprehensive visual guide to Agile product development. Learn Scrum roles, ceremonies, sprint cycles, DORA metrics, Kanban flow, and continuous improvement practices for high-performing teams."
+    />
+    <meta
+      name="keywords"
+      content="agile, scrum, kanban, devops, sprint planning, product development, DORA metrics, agile workflow, team ceremonies, product backlog"
+    />
+    <link rel="canonical" href="https://agile-pizza.cousine.me/" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Agile Product Development Workflow Guide"
+    />
+    <meta
+      property="og:description"
+      content="Comprehensive visual guide to Agile product development with Scrum, Kanban, and DevOps best practices for building high-performing teams."
+    />
+    <meta property="og:url" content="https://agile-pizza.cousine.me/" />
+    <meta
+      property="og:image"
+      content="https://agile-pizza.cousine.me/assets/pizza.png"
+    />
+    <meta
+      property="og:site_name"
+      content="Agile Product Development Workflow"
+    />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Agile Product Development Workflow Guide"
+    />
+    <meta
+      name="twitter:description"
+      content="Learn Scrum, Kanban & DevOps best practices with interactive diagrams and comprehensive metrics guidance."
+    />
+    <meta
+      name="twitter:image"
+      content="https://agile-pizza.cousine.me/assets/pizza.png"
+    />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/pizza.png" />
+
+    <!-- Preconnect and DNS Prefetch for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
+    <!-- Google Fonts with font-display swap -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Q4ZN4RE135"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      // Wait for consent before initializing
+      gtag("consent", "default", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+      });
+
+      gtag("config", "G-Q4ZN4RE135", {
+        anonymize_ip: true,
+      });
+    </script>
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="main.css" />
+
+    <!-- Structured Data - Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Guide",
+        "name": "Agile Product Development Workflow Guide",
+        "description": "A comprehensive framework for building, delivering, and iterating on products through collaborative teamwork and continuous improvement using Scrum, Kanban, and DevOps principles.",
+        "url": "https://agile-pizza.cousine.me/",
+        "image": "https://agile-pizza.cousine.me/assets/pizza.png",
+        "author": {
+          "@type": "Person",
+          "name": "Omar Mekky",
+          "url": "https://cousine.me"
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-12-10",
+        "inLanguage": "en-US",
+        "about": [
+          {
+            "@type": "Thing",
+            "name": "Agile Software Development"
+          },
+          {
+            "@type": "Thing",
+            "name": "Scrum Framework"
+          },
+          {
+            "@type": "Thing",
+            "name": "Kanban Methodology"
+          },
+          {
+            "@type": "Thing",
+            "name": "DevOps Practices"
+          }
+        ],
+        "hasPart": [
+          {
+            "@type": "WebPageElement",
+            "name": "Team Roles",
+            "description": "Product Owner, Scrum Master, and Development Team responsibilities"
+          },
+          {
+            "@type": "WebPageElement",
+            "name": "Team Ceremonies",
+            "description": "Refinement, Sprint Planning, Daily Standup, Sprint Review, and Retrospective"
+          },
+          {
+            "@type": "WebPageElement",
+            "name": "Sprint Cycle",
+            "description": "Interactive diagram showing the 2-week sprint workflow"
+          },
+          {
+            "@type": "WebPageElement",
+            "name": "Key Artifacts",
+            "description": "Product Backlog, Sprint Backlog, and Product Increment"
+          },
+          {
+            "@type": "WebPageElement",
+            "name": "Work Items Best Practices",
+            "description": "Guidelines for writing Epics, User Stories, Tasks, and Sub-tasks"
+          },
+          {
+            "@type": "WebPageElement",
+            "name": "Technical Documentation",
+            "description": "PRD (Product Requirement Document) and RFC (Request for Comments) best practices"
+          },
+          {
+            "@type": "WebPageElement",
+            "name": "Continuous Improvement Metrics",
+            "description": "DORA metrics, Theory of Constraints, Kanban Flow metrics, and Sprint metrics"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+      <div class="cookie-consent-content">
+        <p class="cookie-consent-text">
+          <strong>🍪 We use cookies</strong><br>
+          This site uses Google Analytics to understand how visitors interact with the content. We only collect anonymized data to improve your experience. 
+          <a href="#" id="cookieLearnMore" style="color: var(--primary); text-decoration: underline;">Learn more</a>
+        </p>
+        <div class="cookie-consent-buttons">
+          <button class="cookie-btn cookie-btn-accept" id="cookieAccept">Accept All</button>
+          <button class="cookie-btn cookie-btn-decline" id="cookieDecline">Decline</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cookie Details Modal -->
+    <div class="cookie-modal" id="cookieModal">
+      <div class="cookie-modal-content">
+        <button class="cookie-modal-close" id="cookieModalClose" aria-label="Close">&times;</button>
+        <h3>Cookie Policy</h3>
+        <p>We use Google Analytics to collect anonymous statistics about:</p>
+        <ul>
+          <li>Pages visited and time spent on each section</li>
+          <li>Navigation patterns and link clicks</li>
+          <li>Device type and browser information</li>
+          <li>Geographic location (country/city level only)</li>
+        </ul>
+        <p><strong>We do NOT collect:</strong></p>
+        <ul>
+          <li>Personal identifying information</li>
+          <li>Email addresses or contact details</li>
+          <li>Passwords or sensitive data</li>
+        </ul>
+        <p>Your IP address is anonymized. Data is retained for 14 months (Google Analytics default). You can change your preference anytime using the cookie icon at the bottom of the page.</p>
+        <button class="cookie-btn cookie-btn-accept" id="cookieModalAccept">Accept & Close</button>
+      </div>
+    </div>
+
+    <!-- Cookie Settings Button (always visible) -->
+    <button class="cookie-settings-btn" id="cookieSettings" aria-label="Cookie settings">
+      🍪
+    </button>
+
     <div class="scroll-indicator" id="scrollIndicator"></div>
 
     <!-- Top Navigation Bar -->
@@ -73,7 +273,11 @@
 
     <div class="container">
       <header>
-        <img class="pizza" src="assets/pizza.png" />
+        <img
+          class="pizza"
+          src="assets/pizza.png"
+          alt="Pizza slice representing agile team squads"
+        />
         <h1>An Agile Product Development Workflow for Pizza Squads!</h1>
         <p class="subtitle">
           A comprehensive framework for building, delivering, and iterating on
@@ -81,1785 +285,1871 @@
         </p>
       </header>
 
-      <section id="overview">
-        <h2>What is This Workflow?</h2>
-        <p>
-          This agile workflow is a lightweight framework based on Scrum, Kanban
-          and DevOps principles that helps product teams work together to
-          deliver valuable products iteratively. It encourages teams to learn
-          through experiences, self-organize while working on problems, and
-          reflect on their wins and losses to continuously improve.
-        </p>
-      </section>
+      <main>
+        <section id="overview">
+          <h2>What is This Workflow?</h2>
+          <p>
+            This agile workflow is a lightweight framework based on Scrum,
+            Kanban and DevOps principles that helps product teams work together
+            to deliver valuable products iteratively. It encourages teams to
+            learn through experiences, self-organize while working on problems,
+            and reflect on their wins and losses to continuously improve.
+          </p>
+        </section>
 
-      <section id="roles">
-        <h2>Team Roles</h2>
-        <p>
-          In an agile team, there are different responsibilities to facilitate
-          the flow of a sprint. Those roles aren't job titles but rather roles
-          that need to be filled by members of the team. In some cases a single
-          team member can fill in multiple roles depending on the team needs.
-        </p>
-        <div class="roles-grid">
-          <div class="role-card">
-            <span class="role-icon"><img src="assets/po.png" /></span>
-            <h3>Product Owner</h3>
-            <p>
-              Maximizes the value of the product by managing the Product
-              Backlog, ensuring the team works on the most valuable items, and
-              representing stakeholder interests.
-            </p>
+        <section id="roles">
+          <h2>Team Roles</h2>
+          <p>
+            In an agile team, there are different responsibilities to facilitate
+            the flow of a sprint. Those roles aren't job titles but rather roles
+            that need to be filled by members of the team. In some cases a
+            single team member can fill in multiple roles depending on the team
+            needs.
+          </p>
+          <div class="roles-grid">
+            <div class="role-card">
+              <span class="role-icon"
+                ><img
+                  src="assets/po.png"
+                  alt="Product Owner icon - person with clipboard managing priorities"
+              /></span>
+              <h3>Product Owner</h3>
+              <p>
+                Maximizes the value of the product by managing the Product
+                Backlog, ensuring the team works on the most valuable items, and
+                representing stakeholder interests.
+              </p>
+            </div>
+            <div class="role-card">
+              <span class="role-icon"
+                ><img
+                  src="assets/sm.png"
+                  alt="Scrum Master icon - facilitator helping team collaboration"
+              /></span>
+              <h3>Scrum Master</h3>
+              <p>
+                Serves the team by facilitating team events, removing
+                impediments, and coaching the team on agile practices and
+                principles to improve effectiveness.
+              </p>
+            </div>
+            <div class="role-card">
+              <span class="role-icon"
+                ><img
+                  src="assets/team.png"
+                  alt="Development Team icon - collaborative group working together"
+              /></span>
+              <h3>Development Team</h3>
+              <p>
+                Self-organizing professionals who do the actual work of
+                delivering a potentially shippable product increment at the end
+                of each Sprint.
+              </p>
+            </div>
           </div>
-          <div class="role-card">
-            <span class="role-icon"><img src="assets/sm.png" /></span>
-            <h3>Scrum Master</h3>
-            <p>
-              Serves the team by facilitating team events, removing impediments,
-              and coaching the team on agile practices and principles to improve
-              effectiveness.
-            </p>
-          </div>
-          <div class="role-card">
-            <span class="role-icon"><img src="assets/team.png" /></span>
-            <h3>Development Team</h3>
-            <p>
-              Self-organizing professionals who do the actual work of delivering
-              a potentially shippable product increment at the end of each
-              Sprint.
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="ceremonies">
-        <h2>Team Ceremonies</h2>
-        <p>
-          High performing teams communicate effectively and efficiently, and the
-          following ceremonies are meant to help teams communicate effectively,
-          build common understanding and tackle problems efficiently.
-        </p>
-        <div class="ceremonies-list">
-          <div class="ceremony-item">
-            <h4>Refinement</h4>
-            <span class="duration">1-2 hours</span>
-            <p>
-              The team discusses epics and stories, breaks them down into
-              manageable pieces, estimates effort, and marks items as ready for
-              the upcoming sprint.
-            </p>
+        <section id="ceremonies">
+          <h2>Team Ceremonies</h2>
+          <p>
+            High performing teams communicate effectively and efficiently, and
+            the following ceremonies are meant to help teams communicate
+            effectively, build common understanding and tackle problems
+            efficiently.
+          </p>
+          <div class="ceremonies-list">
+            <div class="ceremony-item">
+              <h4>Refinement</h4>
+              <span class="duration">1-2 hours</span>
+              <p>
+                The team discusses epics and stories, breaks them down into
+                manageable pieces, estimates effort, and marks items as ready
+                for the upcoming sprint.
+              </p>
+            </div>
+            <div class="ceremony-item">
+              <h4>Sprint Planning</h4>
+              <span class="duration">2-4 hours</span>
+              <p>
+                The team selects user stories from the refined backlog for the
+                upcoming 2-week sprint and commits to delivering them.
+              </p>
+            </div>
+            <div class="ceremony-item">
+              <h4>Daily Standup</h4>
+              <span class="duration">15 minutes</span>
+              <p>
+                A daily standup where team members synchronize activities and
+                create a plan for the next 24 hours. Everyone shares progress
+                and obstacles.
+              </p>
+            </div>
+            <div class="ceremony-item">
+              <h4>Sprint Review</h4>
+              <span class="duration">1-2 hours</span>
+              <p>
+                The team demonstrates completed work, reviews sprint metrics,
+                and discusses DORA metrics to measure delivery performance and
+                identify improvements.
+              </p>
+            </div>
+            <div class="ceremony-item">
+              <h4>Sprint Retrospective</h4>
+              <span class="duration">1-1.5 hours</span>
+              <p>
+                The team reflects on the past sprint and identifies improvements
+                for processes, relationships, and tools used during the sprint.
+              </p>
+            </div>
           </div>
-          <div class="ceremony-item">
-            <h4>Sprint Planning</h4>
-            <span class="duration">2-4 hours</span>
-            <p>
-              The team selects user stories from the refined backlog for the
-              upcoming 2-week sprint and commits to delivering them.
-            </p>
-          </div>
-          <div class="ceremony-item">
-            <h4>Daily Standup</h4>
-            <span class="duration">15 minutes</span>
-            <p>
-              A daily standup where team members synchronize activities and
-              create a plan for the next 24 hours. Everyone shares progress and
-              obstacles.
-            </p>
-          </div>
-          <div class="ceremony-item">
-            <h4>Sprint Review</h4>
-            <span class="duration">1-2 hours</span>
-            <p>
-              The team demonstrates completed work, reviews sprint metrics, and
-              discusses DORA metrics to measure delivery performance and
-              identify improvements.
-            </p>
-          </div>
-          <div class="ceremony-item">
-            <h4>Sprint Retrospective</h4>
-            <span class="duration">1-1.5 hours</span>
-            <p>
-              The team reflects on the past sprint and identifies improvements
-              for processes, relationships, and tools used during the sprint.
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="sprint">
-        <h2>The Sprint Cycle</h2>
-        <p>
-          A Sprint or Cycle is a repeatable time box where the team picks up and
-          work on work items.
-        </p>
-        <p style="color: #8892b0; margin-bottom: 10px">
-          Hover over each step to see its description
-        </p>
-        <div class="sprint-cycle">
-          <svg
-            class="cycle-diagram"
-            viewBox="0 0 1000 730"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <!-- Roughen filter for hand-drawn effect -->
-              <filter id="rough">
-                <feTurbulence
-                  type="fractalNoise"
-                  baseFrequency="0.04"
-                  numOctaves="3"
-                  result="noise"
-                  seed="5"
-                />
-                <feDisplacementMap
-                  in="SourceGraphic"
-                  in2="noise"
-                  scale="3"
-                  xChannelSelector="R"
-                  yChannelSelector="G"
-                />
-              </filter>
-            </defs>
+        <section id="sprint">
+          <h2>The Sprint Cycle</h2>
+          <p>
+            A Sprint or Cycle is a repeatable time box where the team picks up
+            and work on work items.
+          </p>
+          <p style="color: #8892b0; margin-bottom: 10px">
+            Hover over each step to see its description
+          </p>
+          <div class="sprint-cycle">
+            <svg
+              class="cycle-diagram"
+              viewBox="0 0 1000 730"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <!-- Roughen filter for hand-drawn effect -->
+                <filter id="rough">
+                  <feTurbulence
+                    type="fractalNoise"
+                    baseFrequency="0.04"
+                    numOctaves="3"
+                    result="noise"
+                    seed="5"
+                  />
+                  <feDisplacementMap
+                    in="SourceGraphic"
+                    in2="noise"
+                    scale="3"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                </filter>
+              </defs>
 
-            <!-- Circular flow path -->
-            <circle
-              cx="500"
-              cy="400"
-              r="320"
-              fill="none"
-              stroke="var(--text-primary)"
-              stroke-width="4"
-              stroke-dasharray="10,8"
-              filter="url(#rough)"
-              class="rotate"
-            />
-
-            <!-- Center circle with 2 Week Sprint -->
-            <g id="center">
+              <!-- Circular flow path -->
               <circle
                 cx="500"
                 cy="400"
-                r="100"
-                fill="var(--primary)"
-                stroke="var(--border)"
+                r="320"
+                fill="none"
+                stroke="var(--text-primary)"
                 stroke-width="4"
+                stroke-dasharray="10,8"
                 filter="url(#rough)"
+                class="rotate"
               />
-              <text
-                x="500"
-                y="410"
-                text-anchor="middle"
-                font-size="24"
-                font-weight="600"
-                fill="var(--text-primary)"
-                font-family="Lexend"
-              >
-                Sprint
-              </text>
-            </g>
 
-            <!-- Step 1: Refinement (12 o'clock, 270°) -->
-            <g id="step1" class="svg-step" data-step="1">
-              <polyline
-                points="2,2 10,6 2,10"
-                transform="
+              <!-- Center circle with 2 Week Sprint -->
+              <g id="center">
+                <circle
+                  cx="500"
+                  cy="400"
+                  r="100"
+                  fill="var(--primary)"
+                  stroke="var(--border)"
+                  stroke-width="4"
+                  filter="url(#rough)"
+                />
+                <text
+                  x="500"
+                  y="410"
+                  text-anchor="middle"
+                  font-size="24"
+                  font-weight="600"
+                  fill="var(--text-primary)"
+                  font-family="Lexend"
+                >
+                  Sprint
+                </text>
+              </g>
+
+              <!-- Step 1: Refinement (12 o'clock, 270°) -->
+              <g id="step1" class="svg-step" data-step="1">
+                <polyline
+                  points="2,2 10,6 2,10"
+                  transform="
                 translate(345 98)
                 scale(2.5)
                 rotate(-28 5 5)
                 "
-                fill="var(--text-primary)"
-              />
-              <rect
-                x="370"
-                y="50"
-                width="260"
-                height="100"
-                fill="white"
-                stroke="var(--border)"
-                stroke-width="4"
-                rx="0"
-                filter="url(#rough)"
-              />
-              <circle
-                cx="420"
-                cy="100"
-                r="18"
-                fill="var(--primary)"
-                stroke="var(--border)"
-                stroke-width="3"
-              />
-              <text
-                x="420"
-                y="107"
-                text-anchor="middle"
-                font-size="16"
-                font-weight="700"
-                fill="var(--text-primary)"
-                font-family="Lexend"
-              >
-                1
-              </text>
-              <text
-                x="500"
-                y="107"
-                text-anchor="middle"
-                font-size="18"
-                font-weight="700"
-                fill="var(--text-primary)"
-                font-family="Lexend"
-              >
-                Refinement
-              </text>
-              <!-- Tooltip box for description -->
-              <g class="step-tooltip" opacity="0">
+                  fill="var(--text-primary)"
+                />
                 <rect
-                  x="650"
-                  y="70"
+                  x="370"
+                  y="50"
                   width="260"
-                  height="70"
+                  height="100"
                   fill="white"
                   stroke="var(--border)"
-                  stroke-width="3"
+                  stroke-width="4"
                   rx="0"
                   filter="url(#rough)"
                 />
+                <circle
+                  cx="420"
+                  cy="100"
+                  r="18"
+                  fill="var(--primary)"
+                  stroke="var(--border)"
+                  stroke-width="3"
+                />
                 <text
-                  x="770"
-                  y="95"
+                  x="420"
+                  y="107"
                   text-anchor="middle"
-                  font-size="12"
-                  fill="var(--text-secondary)"
+                  font-size="16"
+                  font-weight="700"
+                  fill="var(--text-primary)"
                   font-family="Lexend"
                 >
-                  Discuss, break down,
+                  1
                 </text>
                 <text
-                  x="770"
-                  y="115"
+                  x="500"
+                  y="107"
                   text-anchor="middle"
-                  font-size="12"
-                  fill="var(--text-secondary)"
+                  font-size="18"
+                  font-weight="700"
+                  fill="var(--text-primary)"
                   font-family="Lexend"
                 >
-                  estimate & mark ready
+                  Refinement
                 </text>
+                <!-- Tooltip box for description -->
+                <g class="step-tooltip" opacity="0">
+                  <rect
+                    x="650"
+                    y="70"
+                    width="260"
+                    height="70"
+                    fill="white"
+                    stroke="var(--border)"
+                    stroke-width="3"
+                    rx="0"
+                    filter="url(#rough)"
+                  />
+                  <text
+                    x="770"
+                    y="95"
+                    text-anchor="middle"
+                    font-size="12"
+                    fill="var(--text-secondary)"
+                    font-family="Lexend"
+                  >
+                    Discuss, break down,
+                  </text>
+                  <text
+                    x="770"
+                    y="115"
+                    text-anchor="middle"
+                    font-size="12"
+                    fill="var(--text-secondary)"
+                    font-family="Lexend"
+                  >
+                    estimate & mark ready
+                  </text>
+                </g>
               </g>
-            </g>
 
-            <!-- Step 2: Planning (2 o'clock, 300°) -->
-            <g id="step2" class="svg-step" data-step="2">
-              <polyline
-                points="2,2 10,6 2,10"
-                transform="
+              <!-- Step 2: Planning (2 o'clock, 300°) -->
+              <g id="step2" class="svg-step" data-step="2">
+                <polyline
+                  points="2,2 10,6 2,10"
+                  transform="
                 translate(722 166)
                 scale(2.5)
                 rotate(49 5 5)
                 "
-                fill="var(--text-primary)"
-              />
-              <rect
-                x="662"
-                y="190"
-                width="230"
-                height="100"
-                fill="white"
-                stroke="var(--border)"
-                stroke-width="4"
-                rx="0"
-                filter="url(#rough)"
-              />
-              <circle
-                cx="712"
-                cy="240"
-                r="18"
-                fill="var(--primary)"
-                stroke="var(--border)"
-                stroke-width="3"
-              />
-              <text
-                x="712"
-                y="247"
-                text-anchor="middle"
-                font-size="16"
-                font-weight="700"
-                fill="var(--text-primary)"
-                font-family="Lexend"
-              >
-                2
-              </text>
-              <text
-                x="777"
-                y="247"
-                text-anchor="middle"
-                font-size="18"
-                font-weight="700"
-                fill="var(--text-primary)"
-                font-family="Lexend"
-              >
-                Planning
-              </text>
-              <!-- Tooltip box for description -->
-              <g class="step-tooltip" opacity="0">
+                  fill="var(--text-primary)"
+                />
                 <rect
                   x="662"
-                  y="110"
+                  y="190"
                   width="230"
-                  height="70"
+                  height="100"
                   fill="white"
                   stroke="var(--border)"
-                  stroke-width="3"
+                  stroke-width="4"
                   rx="0"
                   filter="url(#rough)"
                 />
+                <circle
+                  cx="712"
+                  cy="240"
+                  r="18"
+                  fill="var(--primary)"
+                  stroke="var(--border)"
+                  stroke-width="3"
+                />
                 <text
-                  x="777"
-                  y="135"
+                  x="712"
+                  y="247"
                   text-anchor="middle"
-                  font-size="12"
-                  fill="var(--text-secondary)"
+                  font-size="16"
+                  font-weight="700"
+                  fill="var(--text-primary)"
                   font-family="Lexend"
                 >
-                  Select stories from
+                  2
                 </text>
                 <text
                   x="777"
-                  y="155"
+                  y="247"
                   text-anchor="middle"
-                  font-size="12"
-                  fill="var(--text-secondary)"
+                  font-size="18"
+                  font-weight="700"
+                  fill="var(--text-primary)"
                   font-family="Lexend"
                 >
-                  backlog for sprint
+                  Planning
                 </text>
+                <!-- Tooltip box for description -->
+                <g class="step-tooltip" opacity="0">
+                  <rect
+                    x="662"
+                    y="110"
+                    width="230"
+                    height="70"
+                    fill="white"
+                    stroke="var(--border)"
+                    stroke-width="3"
+                    rx="0"
+                    filter="url(#rough)"
+                  />
+                  <text
+                    x="777"
+                    y="135"
+                    text-anchor="middle"
+                    font-size="12"
+                    fill="var(--text-secondary)"
+                    font-family="Lexend"
+                  >
+                    Select stories from
+                  </text>
+                  <text
+                    x="777"
+                    y="155"
+                    text-anchor="middle"
+                    font-size="12"
+                    fill="var(--text-secondary)"
+                    font-family="Lexend"
+                  >
+                    backlog for sprint
+                  </text>
+                </g>
               </g>
-            </g>
 
-            <!-- Step 3: Daily Standup (4 o'clock, 330°) -->
-            <g id="step3" class="svg-step" data-step="3">
-              <polyline
-                points="2,2 10,6 2,10"
-                transform="
+              <!-- Step 3: Daily Standup (4 o'clock, 330°) -->
+              <g id="step3" class="svg-step" data-step="3">
+                <polyline
+                  points="2,2 10,6 2,10"
+                  transform="
                 translate(794 485)
                 scale(2.5)
                 rotate(110 5 5)
                 "
-                fill="var(--text-primary)"
-              />
-              <rect
-                x="657"
-                y="510"
-                width="240"
-                height="100"
-                fill="white"
-                stroke="var(--border)"
-                stroke-width="4"
-                rx="0"
-                filter="url(#rough)"
-              />
-              <circle
-                cx="697"
-                cy="560"
-                r="18"
-                fill="var(--primary)"
-                stroke="var(--border)"
-                stroke-width="3"
-              />
-              <text
-                x="697"
-                y="567"
-                text-anchor="middle"
-                font-size="16"
-                font-weight="700"
-                fill="var(--text-primary)"
-                font-family="Lexend"
-              >
-                3
-              </text>
-              <text
-                x="787"
-                y="567"
-                text-anchor="middle"
-                font-size="17"
-                font-weight="700"
-                fill="var(--text-primary)"
-                font-family="Lexend"
-              >
-                Daily Standup
-              </text>
-              <!-- Tooltip box for description -->
-              <g class="step-tooltip" opacity="0">
+                  fill="var(--text-primary)"
+                />
                 <rect
                   x="657"
-                  y="620"
+                  y="510"
                   width="240"
-                  height="70"
+                  height="100"
                   fill="white"
                   stroke="var(--border)"
-                  stroke-width="3"
+                  stroke-width="4"
                   rx="0"
                   filter="url(#rough)"
                 />
+                <circle
+                  cx="697"
+                  cy="560"
+                  r="18"
+                  fill="var(--primary)"
+                  stroke="var(--border)"
+                  stroke-width="3"
+                />
                 <text
-                  x="777"
-                  y="645"
+                  x="697"
+                  y="567"
                   text-anchor="middle"
-                  font-size="12"
-                  fill="var(--text-secondary)"
+                  font-size="16"
+                  font-weight="700"
+                  fill="var(--text-primary)"
                   font-family="Lexend"
                 >
-                  15-minute daily
+                  3
                 </text>
                 <text
-                  x="777"
-                  y="665"
+                  x="787"
+                  y="567"
                   text-anchor="middle"
-                  font-size="12"
-                  fill="var(--text-secondary)"
+                  font-size="17"
+                  font-weight="700"
+                  fill="var(--text-primary)"
                   font-family="Lexend"
                 >
-                  sync meeting
+                  Daily Standup
                 </text>
+                <!-- Tooltip box for description -->
+                <g class="step-tooltip" opacity="0">
+                  <rect
+                    x="657"
+                    y="620"
+                    width="240"
+                    height="70"
+                    fill="white"
+                    stroke="var(--border)"
+                    stroke-width="3"
+                    rx="0"
+                    filter="url(#rough)"
+                  />
+                  <text
+                    x="777"
+                    y="645"
+                    text-anchor="middle"
+                    font-size="12"
+                    fill="var(--text-secondary)"
+                    font-family="Lexend"
+                  >
+                    15-minute daily
+                  </text>
+                  <text
+                    x="777"
+                    y="665"
+                    text-anchor="middle"
+                    font-size="12"
+                    fill="var(--text-secondary)"
+                    font-family="Lexend"
+                  >
+                    sync meeting
+                  </text>
+                </g>
               </g>
-            </g>
 
-            <!-- Step 4: Sprint Review (8 o'clock, 30°) -->
-            <g id="step4" class="svg-step" data-step="4">
-              <polyline
-                points="2,2 10,6 2,10"
-                transform="
+              <!-- Step 4: Sprint Review (8 o'clock, 30°) -->
+              <g id="step4" class="svg-step" data-step="4">
+                <polyline
+                  points="2,2 10,6 2,10"
+                  transform="
                 translate(253 609)
                 scale(2.5)
                 rotate(-130 5 5)
                 "
-                fill="var(--text-primary)"
-              />
-              <rect
-                x="113"
-                y="510"
-                width="220"
-                height="100"
-                fill="white"
-                stroke="var(--border)"
-                stroke-width="4"
-                rx="0"
-                filter="url(#rough)"
-              />
-              <circle
-                cx="163"
-                cy="560"
-                r="18"
-                fill="var(--primary)"
-                stroke="var(--border)"
-                stroke-width="3"
-              />
-              <text
-                x="163"
-                y="567"
-                text-anchor="middle"
-                font-size="16"
-                font-weight="700"
-                fill="var(--text-primary)"
-                font-family="Lexend"
-              >
-                4
-              </text>
-              <text
-                x="223"
-                y="567"
-                text-anchor="middle"
-                font-size="18"
-                font-weight="700"
-                fill="var(--text-primary)"
-                font-family="Lexend"
-              >
-                Review
-              </text>
-              <!-- Tooltip box for description -->
-              <g class="step-tooltip" opacity="0">
+                  fill="var(--text-primary)"
+                />
                 <rect
                   x="113"
-                  y="620"
+                  y="510"
                   width="220"
-                  height="70"
+                  height="100"
                   fill="white"
                   stroke="var(--border)"
-                  stroke-width="3"
+                  stroke-width="4"
                   rx="0"
                   filter="url(#rough)"
                 />
+                <circle
+                  cx="163"
+                  cy="560"
+                  r="18"
+                  fill="var(--primary)"
+                  stroke="var(--border)"
+                  stroke-width="3"
+                />
                 <text
-                  x="223"
-                  y="645"
+                  x="163"
+                  y="567"
                   text-anchor="middle"
-                  font-size="12"
-                  fill="var(--text-secondary)"
+                  font-size="16"
+                  font-weight="700"
+                  fill="var(--text-primary)"
                   font-family="Lexend"
                 >
-                  Demo, metrics,
+                  4
                 </text>
                 <text
                   x="223"
-                  y="665"
+                  y="567"
                   text-anchor="middle"
-                  font-size="12"
-                  fill="var(--text-secondary)"
+                  font-size="18"
+                  font-weight="700"
+                  fill="var(--text-primary)"
                   font-family="Lexend"
                 >
-                  DORA
+                  Review
                 </text>
+                <!-- Tooltip box for description -->
+                <g class="step-tooltip" opacity="0">
+                  <rect
+                    x="113"
+                    y="620"
+                    width="220"
+                    height="70"
+                    fill="white"
+                    stroke="var(--border)"
+                    stroke-width="3"
+                    rx="0"
+                    filter="url(#rough)"
+                  />
+                  <text
+                    x="223"
+                    y="645"
+                    text-anchor="middle"
+                    font-size="12"
+                    fill="var(--text-secondary)"
+                    font-family="Lexend"
+                  >
+                    Demo, metrics,
+                  </text>
+                  <text
+                    x="223"
+                    y="665"
+                    text-anchor="middle"
+                    font-size="12"
+                    fill="var(--text-secondary)"
+                    font-family="Lexend"
+                  >
+                    DORA
+                  </text>
+                </g>
               </g>
-            </g>
 
-            <!-- Step 5: Retrospective (10 o'clock, 60°) -->
-            <g id="step5" class="svg-step" data-step="5">
-              <polyline
-                points="2,2 10,6 2,10"
-                transform="
+              <!-- Step 5: Retrospective (10 o'clock, 60°) -->
+              <g id="step5" class="svg-step" data-step="5">
+                <polyline
+                  points="2,2 10,6 2,10"
+                  transform="
                 translate(180 290)
                 scale(2.5)
                 rotate(-72 5 5)
                 "
-                fill="var(--text-primary)"
-              />
-              <rect
-                x="108"
-                y="190"
-                width="230"
-                height="100"
-                fill="white"
-                stroke="var(--border)"
-                stroke-width="4"
-                rx="0"
-                filter="url(#rough)"
-              />
-              <circle
-                cx="148"
-                cy="240"
-                r="18"
-                fill="var(--primary)"
-                stroke="var(--border)"
-                stroke-width="3"
-              />
-              <text
-                x="148"
-                y="247"
-                text-anchor="middle"
-                font-size="16"
-                font-weight="700"
-                fill="var(--text-primary)"
-                font-family="Lexend"
-              >
-                5
-              </text>
-              <text
-                x="243"
-                y="247"
-                text-anchor="middle"
-                font-size="17"
-                font-weight="700"
-                fill="var(--text-primary)"
-                font-family="Lexend"
-              >
-                Retrospective
-              </text>
-              <!-- Tooltip box for description -->
-              <g class="step-tooltip" opacity="0">
+                  fill="var(--text-primary)"
+                />
                 <rect
                   x="108"
-                  y="110"
+                  y="190"
                   width="230"
-                  height="70"
+                  height="100"
                   fill="white"
                   stroke="var(--border)"
-                  stroke-width="3"
+                  stroke-width="4"
                   rx="0"
                   filter="url(#rough)"
                 />
+                <circle
+                  cx="148"
+                  cy="240"
+                  r="18"
+                  fill="var(--primary)"
+                  stroke="var(--border)"
+                  stroke-width="3"
+                />
                 <text
-                  x="223"
-                  y="135"
+                  x="148"
+                  y="247"
                   text-anchor="middle"
-                  font-size="12"
-                  fill="var(--text-secondary)"
+                  font-size="16"
+                  font-weight="700"
+                  fill="var(--text-primary)"
                   font-family="Lexend"
                 >
-                  Reflect and plan
+                  5
                 </text>
                 <text
-                  x="223"
-                  y="155"
+                  x="243"
+                  y="247"
                   text-anchor="middle"
-                  font-size="12"
-                  fill="var(--text-secondary)"
+                  font-size="17"
+                  font-weight="700"
+                  fill="var(--text-primary)"
                   font-family="Lexend"
                 >
-                  improvements
+                  Retrospective
                 </text>
+                <!-- Tooltip box for description -->
+                <g class="step-tooltip" opacity="0">
+                  <rect
+                    x="108"
+                    y="110"
+                    width="230"
+                    height="70"
+                    fill="white"
+                    stroke="var(--border)"
+                    stroke-width="3"
+                    rx="0"
+                    filter="url(#rough)"
+                  />
+                  <text
+                    x="223"
+                    y="135"
+                    text-anchor="middle"
+                    font-size="12"
+                    fill="var(--text-secondary)"
+                    font-family="Lexend"
+                  >
+                    Reflect and plan
+                  </text>
+                  <text
+                    x="223"
+                    y="155"
+                    text-anchor="middle"
+                    font-size="12"
+                    fill="var(--text-secondary)"
+                    font-family="Lexend"
+                  >
+                    improvements
+                  </text>
+                </g>
               </g>
-            </g>
-          </svg>
-        </div>
-      </section>
-
-      <section id="artifacts">
-        <h2>Key Artifacts</h2>
-        <div class="artifacts-grid">
-          <div class="artifact-card">
-            <span class="artifact-icon">
-              <img src="assets/product_backlog.png" alt="Product Backlog" />
-            </span>
-            <h4>Product Backlog</h4>
-            <p>
-              An ordered list of everything that is known to be needed in the
-              product. It's dynamic, constantly changing to identify what the
-              product needs to be competitive and useful.
-            </p>
+            </svg>
           </div>
-          <div class="artifact-card">
-            <span class="artifact-icon">
-              <img src="assets/sprint_backlog.png" alt="Sprint Backlog" />
-            </span>
-            <h4>Sprint Backlog</h4>
-            <p>
-              The set of Product Backlog items selected for the Sprint, plus a
-              plan for delivering them. It's a highly visible, real-time picture
-              of the work the team plans to accomplish.
-            </p>
-          </div>
-          <div class="artifact-card">
-            <span class="artifact-icon">
-              <img src="assets/product_increment.png" alt="Product Increment" />
-            </span>
-            <h4>Product Increment</h4>
-            <p>
-              The sum of all Product Backlog items completed during a Sprint,
-              combined with all previous Sprints. It must be in a useable
-              condition regardless of whether the Product Owner decides to
-              release it.
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="work-items">
-        <h2>Writing Work Items: Best Practices</h2>
-        <p>
-          Effective work item creation is crucial for clear communication and
-          successful sprint execution. Each level serves a specific purpose in
-          the product development hierarchy.
-        </p>
-
-        <div class="work-items-grid">
-          <div class="work-item-card epic-card">
-            <div class="work-item-header">
-              <span class="work-item-icon">
-                <img src="assets/epic.png" alt="Epic" />
+        <section id="artifacts">
+          <h2>Key Artifacts</h2>
+          <div class="artifacts-grid">
+            <div class="artifact-card">
+              <span class="artifact-icon">
+                <img
+                  src="assets/product_backlog.png"
+                  alt="Product Backlog - prioritized list of features and requirements"
+                  loading="lazy"
+                />
               </span>
-              <h3>Epics</h3>
-              <span class="work-item-badge">Large Initiative</span>
-            </div>
-            <div class="work-item-content">
-              <h4>What is an Epic?</h4>
+              <h4>Product Backlog</h4>
               <p>
-                A large body of work that can be broken down into smaller
-                stories. Epics typically span multiple sprints and represent
-                significant features, initiatives, or technical improvements.
+                An ordered list of everything that is known to be needed in the
+                product. It's dynamic, constantly changing to identify what the
+                product needs to be competitive and useful.
               </p>
-
-              <h4>Best Practices:</h4>
-              <ul>
-                <li>Focus on business value and outcomes</li>
-                <li>Keep them broad but with clear boundaries</li>
-                <li>Include success criteria and measurable goals</li>
-                <li>Represents significant features or initiatives</li>
-              </ul>
-
-              <div class="example-box">
-                <strong>User-Facing Epic:</strong><br />
-                <strong>Title:</strong> Mobile App Experience<br />
-                <strong>Description:</strong> Develop a native mobile
-                application that enables customers to access core services on
-                iOS and Android devices, providing a seamless on-the-go
-                experience.<br /><br />
-                <strong>Success Criteria:</strong>
-                <ul style="margin-top: 8px; font-size: 0.9rem">
-                  <li>App available on iOS and Android app stores</li>
-                  <li>50% of active users adopt mobile app within 6 months</li>
-                  <li>Mobile user satisfaction score above 4.5/5</li>
-                </ul>
-              </div>
-
-              <div class="example-box" style="margin-top: 15px">
-                <strong>Technical Epic:</strong><br />
-                <strong>Title:</strong> Microservices Architecture Migration<br />
-                <strong>Description:</strong> Transition from monolithic
-                architecture to microservices to improve scalability, deployment
-                flexibility, and team autonomy.<br /><br />
-                <strong>Success Criteria:</strong>
-                <ul style="margin-top: 8px; font-size: 0.9rem">
-                  <li>Core services decomposed into 8-10 microservices</li>
-                  <li>Independent deployment capability for each service</li>
-                  <li>System maintains 99.9% uptime during migration</li>
-                </ul>
-              </div>
             </div>
-          </div>
-
-          <div class="work-item-card story-card">
-            <div class="work-item-header">
-              <span class="work-item-icon">
-                <img src="assets/user_story.png" alt="User Story" />
+            <div class="artifact-card">
+              <span class="artifact-icon">
+                <img
+                  src="assets/sprint_backlog.png"
+                  alt="Sprint Backlog - selected work items for current sprint"
+                  loading="lazy"
+                />
               </span>
-              <h3>User Stories</h3>
-              <span class="work-item-badge">Sprint Level</span>
-            </div>
-            <div class="work-item-content">
-              <h4>What is a User Story?</h4>
+              <h4>Sprint Backlog</h4>
               <p>
-                A small, deliverable piece of functionality that delivers value.
-                Stories should be completable within a single sprint and can
-                represent both user-facing features and technical work.
+                The set of Product Backlog items selected for the Sprint, plus a
+                plan for delivering them. It's a highly visible, real-time
+                picture of the work the team plans to accomplish.
               </p>
-
-              <h4>Best Practices:</h4>
-              <ul>
-                <li>Keep stories concise with clear value proposition</li>
-                <li>
-                  Follow INVEST criteria (Independent, Negotiable, Valuable,
-                  Estimable, Small, Testable)
-                </li>
-                <li>Include clear acceptance criteria</li>
-                <li>Keep them small enough for one sprint</li>
-                <li>Focus on outcomes and value delivered</li>
-              </ul>
-
-              <div class="example-box">
-                <strong>User-Facing Story:</strong><br />
-                <strong>Title:</strong> Password Reset via Email<br />
-                <strong>Description:</strong> Enable users to reset their
-                password through email verification to regain account access
-                when forgotten.<br /><br />
-                <strong>Acceptance Criteria:</strong>
-                <ul style="margin-top: 8px; font-size: 0.9rem">
-                  <li>User receives reset email within 5 minutes</li>
-                  <li>Reset link expires after 24 hours</li>
-                  <li>Password must meet security requirements</li>
-                  <li>User is notified of successful password change</li>
-                </ul>
-              </div>
-
-              <div class="example-box" style="margin-top: 15px">
-                <strong>Technical Story:</strong><br />
-                <strong>Title:</strong> Migrate Database to PostgreSQL 15<br />
-                <strong>Description:</strong> Upgrade the production database
-                from PostgreSQL 13 to PostgreSQL 15 to gain performance
-                improvements and security updates.<br /><br />
-                <strong>Acceptance Criteria:</strong>
-                <ul style="margin-top: 8px; font-size: 0.9rem">
-                  <li>Zero data loss during migration</li>
-                  <li>All existing queries function correctly</li>
-                  <li>Performance benchmarks meet or exceed current levels</li>
-                  <li>Rollback plan tested and documented</li>
-                </ul>
-              </div>
             </div>
-          </div>
-
-          <div class="work-item-card task-card">
-            <div class="work-item-header">
-              <span class="work-item-icon">
-                <img src="assets/task.png" alt="Task" />
+            <div class="artifact-card">
+              <span class="artifact-icon">
+                <img
+                  src="assets/product_increment.png"
+                  alt="Product Increment - completed and shippable features"
+                  loading="lazy"
+                />
               </span>
-              <h3>Tasks</h3>
-              <span class="work-item-badge">Implementation</span>
-            </div>
-            <div class="work-item-content">
-              <h4>What is a Task?</h4>
+              <h4>Product Increment</h4>
               <p>
-                Technical work items that break down a story into actionable
-                steps. Tasks represent the "how" of implementing a story.
+                The sum of all Product Backlog items completed during a Sprint,
+                combined with all previous Sprints. It must be in a useable
+                condition regardless of whether the Product Owner decides to
+                release it.
               </p>
-
-              <h4>Best Practices:</h4>
-              <ul>
-                <li>Be specific and actionable</li>
-                <li>Keep scope manageable and focused</li>
-                <li>Assign to a single person</li>
-                <li>Include technical details and approach</li>
-                <li>Can be created during sprint planning or execution</li>
-              </ul>
-
-              <div class="example-box">
-                <strong>Examples:</strong>
-                <ul style="margin-top: 8px">
-                  <li>Create password reset API endpoint</li>
-                  <li>Design email template for reset link</li>
-                  <li>Implement token generation and validation</li>
-                  <li>Write unit tests for password reset flow</li>
-                </ul>
-              </div>
             </div>
           </div>
+        </section>
 
-          <div class="work-item-card subtask-card">
-            <div class="work-item-header">
-              <span class="work-item-icon">
-                <img src="assets/sub_task.png" alt="Sub-task" />
-              </span>
-              <h3>Sub-tasks</h3>
-              <span class="work-item-badge">Granular Steps</span>
-            </div>
-            <div class="work-item-content">
-              <h4>What is a Sub-task?</h4>
-              <p>
-                Very small, specific pieces of work that break down a task
-                further. Used when a task needs additional detail or tracking.
-              </p>
-
-              <h4>Best Practices:</h4>
-              <ul>
-                <li>Extremely specific and granular</li>
-                <li>Keep scope very small and focused</li>
-                <li>Use when task complexity requires it</li>
-                <li>Keep the hierarchy shallow (avoid over-nesting)</li>
-              </ul>
-
-              <div class="example-box">
-                <strong
-                  >Examples for "Create password reset API endpoint":</strong
-                >
-                <ul style="margin-top: 8px">
-                  <li>Set up route handler</li>
-                  <li>Add input validation</li>
-                  <li>Integrate with email service</li>
-                  <li>Add error handling</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hierarchy-visual">
-          <h3
-            style="
-              color: var(--primary);
-              margin-bottom: 20px;
-              text-align: center;
-            "
-          >
-            Work Item Hierarchy
-          </h3>
-          <div class="hierarchy-flow">
-            <div class="hierarchy-item">
-              <div class="hierarchy-box epic-box">Epic</div>
-              <div class="hierarchy-label">Large initiative</div>
-            </div>
-            <div class="hierarchy-arrow">→</div>
-            <div class="hierarchy-item">
-              <div class="hierarchy-box story-box">Story</div>
-              <div class="hierarchy-label">Deliverable unit</div>
-            </div>
-            <div class="hierarchy-arrow">→</div>
-            <div class="hierarchy-item">
-              <div class="hierarchy-box task-box">Task</div>
-              <div class="hierarchy-label">Implementation step</div>
-            </div>
-            <div class="hierarchy-arrow">→</div>
-            <div class="hierarchy-item">
-              <div class="hierarchy-box subtask-box">Sub-task</div>
-              <div class="hierarchy-label">Granular step</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="documentation">
-        <h2>Technical Documentation: PRD & RFC</h2>
-        <p>
-          Product Requirement Documents (PRDs) and Requests for Comments (RFCs)
-          are essential tools for aligning teams, documenting decisions, and
-          ensuring quality in product and technical development.
-        </p>
-
-        <div class="doc-grid">
-          <div class="doc-card prd-card">
-            <div class="doc-header">
-              <span class="doc-icon">
-                <img src="assets/prd.png" alt="PRD" />
-              </span>
-              <h3>PRD (Product Requirement Document)</h3>
-            </div>
-            <div class="doc-content">
-              <h4>What is a PRD?</h4>
-              <p>
-                A comprehensive document that defines the product requirements,
-                user needs, success metrics, and scope for a feature or
-                initiative. PRDs are typically written before development begins
-                and serve as the source of truth for what will be built.
-              </p>
-
-              <h4>When to Write a PRD:</h4>
-              <ul>
-                <li>Before starting work on significant new features</li>
-                <li>When launching new products or major initiatives</li>
-                <li>For features requiring cross-team coordination</li>
-                <li>
-                  When the scope and requirements need formal documentation
-                </li>
-              </ul>
-
-              <h4>Best Practices:</h4>
-              <ul>
-                <li>
-                  <strong>Start with the problem:</strong> Clearly articulate
-                  the user problem or business need being addressed
-                </li>
-                <li>
-                  <strong>Define success metrics:</strong> Establish measurable
-                  goals and KPIs upfront
-                </li>
-                <li>
-                  <strong>Be specific about scope:</strong> Clearly state what's
-                  in scope and what's explicitly out of scope
-                </li>
-                <li>
-                  <strong>Include user stories:</strong> Provide concrete
-                  examples of how users will interact with the feature
-                </li>
-                <li>
-                  <strong>Add mockups/wireframes:</strong> Visual
-                  representations help align understanding
-                </li>
-                <li>
-                  <strong>Document assumptions:</strong> List key assumptions
-                  and dependencies
-                </li>
-                <li>
-                  <strong>Consider edge cases:</strong> Think through error
-                  states and boundary conditions
-                </li>
-                <li>
-                  <strong>Keep it living:</strong> Update the PRD as
-                  requirements evolve
-                </li>
-              </ul>
-
-              <div class="doc-structure">
-                <h4>Typical PRD Structure:</h4>
-                <div class="structure-list">
-                  <div class="structure-item">
-                    <span class="structure-number">1</span>
-                    <div>
-                      <strong>Overview & Context</strong>
-                      <p>Background, problem statement, and goals</p>
-                    </div>
-                  </div>
-                  <div class="structure-item">
-                    <span class="structure-number">2</span>
-                    <div>
-                      <strong>User Personas & Stories</strong>
-                      <p>Target users and their use cases</p>
-                    </div>
-                  </div>
-                  <div class="structure-item">
-                    <span class="structure-number">3</span>
-                    <div>
-                      <strong>Requirements</strong>
-                      <p>Functional and non-functional requirements</p>
-                    </div>
-                  </div>
-                  <div class="structure-item">
-                    <span class="structure-number">4</span>
-                    <div>
-                      <strong>Success Metrics</strong>
-                      <p>KPIs and measurement criteria</p>
-                    </div>
-                  </div>
-                  <div class="structure-item">
-                    <span class="structure-number">5</span>
-                    <div>
-                      <strong>Design & Mockups</strong>
-                      <p>Visual representation of the solution</p>
-                    </div>
-                  </div>
-                  <div class="structure-item">
-                    <span class="structure-number">6</span>
-                    <div>
-                      <strong>Out of Scope</strong>
-                      <p>What will NOT be included</p>
-                    </div>
-                  </div>
-                  <div class="structure-item">
-                    <span class="structure-number">7</span>
-                    <div>
-                      <strong>Timeline & Dependencies</strong>
-                      <p>Key milestones and blockers</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="doc-card rfc-card">
-            <div class="doc-header">
-              <span class="doc-icon">
-                <img src="assets/rfc.png" alt="RFC" />
-              </span>
-              <h3>RFC (Request for Comments)</h3>
-            </div>
-            <div class="doc-content">
-              <h4>What is an RFC?</h4>
-              <p>
-                A technical design document that proposes a solution,
-                architecture, or approach for solving a problem. RFCs invite
-                feedback and discussion from the team before implementation,
-                promoting collaborative decision-making and knowledge sharing.
-              </p>
-
-              <h4>When to Write an RFC:</h4>
-              <ul>
-                <li>Before making significant architectural decisions</li>
-                <li>When introducing new technologies or frameworks</li>
-                <li>For changes that impact multiple teams or systems</li>
-                <li>When multiple solution approaches are possible</li>
-                <li>To document and socialize technical decisions</li>
-              </ul>
-
-              <h4>Best Practices:</h4>
-              <ul>
-                <li>
-                  <strong>State the problem clearly:</strong> Explain what
-                  problem you're solving and why it matters
-                </li>
-                <li>
-                  <strong>Propose concrete solutions:</strong> Present one or
-                  more specific approaches with trade-offs
-                </li>
-                <li>
-                  <strong>Compare alternatives:</strong> Evaluate different
-                  options objectively
-                </li>
-                <li>
-                  <strong>Include diagrams:</strong> Architecture diagrams, flow
-                  charts, and sequence diagrams clarify complex concepts
-                </li>
-                <li>
-                  <strong>Address concerns proactively:</strong> Anticipate
-                  questions about performance, security, scalability
-                </li>
-                <li>
-                  <strong>Set a review timeline:</strong> Give reviewers a clear
-                  deadline for feedback
-                </li>
-                <li>
-                  <strong>Invite diverse perspectives:</strong> Seek input from
-                  different roles and teams
-                </li>
-                <li>
-                  <strong>Document the decision:</strong> Record what was
-                  decided and why
-                </li>
-              </ul>
-
-              <div class="doc-structure">
-                <h4>Typical RFC Structure:</h4>
-                <div class="structure-list">
-                  <div class="structure-item">
-                    <span class="structure-number">1</span>
-                    <div>
-                      <strong>Summary</strong>
-                      <p>High-level overview in 2-3 sentences</p>
-                    </div>
-                  </div>
-                  <div class="structure-item">
-                    <span class="structure-number">2</span>
-                    <div>
-                      <strong>Problem Statement</strong>
-                      <p>What problem are we solving and why</p>
-                    </div>
-                  </div>
-                  <div class="structure-item">
-                    <span class="structure-number">3</span>
-                    <div>
-                      <strong>Proposed Solution</strong>
-                      <p>Detailed technical approach</p>
-                    </div>
-                  </div>
-                  <div class="structure-item">
-                    <span class="structure-number">4</span>
-                    <div>
-                      <strong>Alternative Approaches</strong>
-                      <p>Other options considered and why not chosen</p>
-                    </div>
-                  </div>
-                  <div class="structure-item">
-                    <span class="structure-number">5</span>
-                    <div>
-                      <strong>Trade-offs & Risks</strong>
-                      <p>Downsides and mitigation strategies</p>
-                    </div>
-                  </div>
-                  <div class="structure-item">
-                    <span class="structure-number">6</span>
-                    <div>
-                      <strong>Implementation Plan</strong>
-                      <p>Rollout strategy and phases</p>
-                    </div>
-                  </div>
-                  <div class="structure-item">
-                    <span class="structure-number">7</span>
-                    <div>
-                      <strong>Open Questions</strong>
-                      <p>Areas where feedback is specifically needed</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="doc-comparison">
-          <h3
-            style="
-              color: var(--primary);
-              margin-bottom: 25px;
-              text-align: center;
-            "
-          >
-            PRD vs RFC: When to Use Each
-          </h3>
-          <div class="comparison-grid">
-            <div class="comparison-item">
-              <h4 style="color: var(--purple)">PRD</h4>
-              <ul>
-                <li><strong>Focus:</strong> What to build and why</li>
-                <li>
-                  <strong>Audience:</strong> Product managers, stakeholders,
-                  entire team
-                </li>
-                <li><strong>Perspective:</strong> User and business needs</li>
-                <li>
-                  <strong>Detail Level:</strong> Requirements and expected
-                  behavior
-                </li>
-                <li>
-                  <strong>Example:</strong> "Build a two-factor authentication
-                  feature"
-                </li>
-              </ul>
-            </div>
-            <div class="comparison-item">
-              <h4 style="color: var(--primary)">RFC</h4>
-              <ul>
-                <li><strong>Focus:</strong> How to build it technically</li>
-                <li>
-                  <strong>Audience:</strong> Engineers, architects, technical
-                  teams
-                </li>
-                <li><strong>Perspective:</strong> Technical implementation</li>
-                <li>
-                  <strong>Detail Level:</strong> Architecture, systems,
-                  technologies
-                </li>
-                <li>
-                  <strong>Example:</strong> "Use TOTP protocol for 2FA
-                  implementation"
-                </li>
-              </ul>
-            </div>
-          </div>
-          <p
-            style="
-              text-align: center;
-              margin-top: 25px;
-              color: #8892b0;
-              font-size: 0.95rem;
-            "
-          >
-            <strong>Tip:</strong> Many initiatives benefit from both a PRD
-            (defining requirements) and an RFC (defining technical approach)
+        <section id="work-items">
+          <h2>Writing Work Items: Best Practices</h2>
+          <p>
+            Effective work item creation is crucial for clear communication and
+            successful sprint execution. Each level serves a specific purpose in
+            the product development hierarchy.
           </p>
-        </div>
-      </section>
 
-      <section id="metrics">
-        <h2>Continuous Improvement Metrics</h2>
-        <p>
-          Measuring the right metrics helps teams identify opportunities for
-          improvement, track progress, and make data-driven decisions. These
-          metrics provide visibility into delivery speed, quality, and flow
-          efficiency to drive continuous improvement.
-        </p>
-
-        <div class="metrics-scroll-wrapper">
-          <div class="metrics-scroll-container">
-            <button
-              class="metrics-scroll-btn metrics-scroll-btn-left"
-              id="metricsScrollLeft"
-              aria-label="Scroll to previous metric"
-            >
-              <img src="assets/arrow.png" alt="" />
-            </button>
-            <button
-              class="metrics-scroll-btn metrics-scroll-btn-right"
-              id="metricsScrollRight"
-              aria-label="Scroll to next metric"
-            >
-              <img src="assets/arrow.png" alt="" />
-            </button>
-          </div>
-          <div class="metrics-grid">
-            <div class="metric-card dora-card">
-              <div class="metric-header">
-                <span class="metric-icon">
-                  <img src="assets/dora.png" alt="DORA" />
+          <div class="work-items-grid">
+            <div class="work-item-card epic-card">
+              <div class="work-item-header">
+                <span class="work-item-icon">
+                  <img
+                    src="assets/epic.png"
+                    alt="Epic work item - large initiative spanning multiple sprints"
+                    loading="lazy"
+                  />
                 </span>
-                <h3>DORA Metrics</h3>
-                <span class="metric-badge">DevOps Performance</span>
+                <h3>Epics</h3>
+                <span class="work-item-badge">Large Initiative</span>
               </div>
-              <div class="metric-content">
-                <h4>What are DORA Metrics?</h4>
+              <div class="work-item-content">
+                <h4>What is an Epic?</h4>
                 <p>
-                  DORA (DevOps Research and Assessment) metrics are four key
-                  measures that indicate the performance of software delivery
-                  teams. Research shows these metrics are strong predictors of
-                  organizational performance.
+                  A large body of work that can be broken down into smaller
+                  stories. Epics typically span multiple sprints and represent
+                  significant features, initiatives, or technical improvements.
                 </p>
 
-                <div class="metric-list">
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Deployment Frequency</strong>
-                    </div>
-                    <p>How often does your team deploy code to production?</p>
-                    <div class="metric-target">
-                      <span class="target-label">Elite:</span> Multiple
-                      deployments per day<br />
-                      <span class="target-label">High:</span> Between once per
-                      day and once per week<br />
-                      <span class="target-label">Medium:</span> Between once per
-                      week and once per month<br />
-                      <span class="target-label">Low:</span> Less than once per
-                      month
-                    </div>
-                  </div>
+                <h4>Best Practices:</h4>
+                <ul>
+                  <li>Focus on business value and outcomes</li>
+                  <li>Keep them broad but with clear boundaries</li>
+                  <li>Include success criteria and measurable goals</li>
+                  <li>Represents significant features or initiatives</li>
+                </ul>
 
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Lead Time for Changes</strong>
-                    </div>
-                    <p>
-                      How long does it take from code commit to code running in
-                      production?
-                    </p>
-                    <div class="metric-target">
-                      <span class="target-label">Elite:</span> Less than one
-                      hour<br />
-                      <span class="target-label">High:</span> Between one day
-                      and one week<br />
-                      <span class="target-label">Medium:</span> Between one week
-                      and one month<br />
-                      <span class="target-label">Low:</span> More than one month
-                    </div>
-                  </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Change Failure Rate</strong>
-                    </div>
-                    <p>
-                      What percentage of deployments cause a failure in
-                      production requiring hotfix or rollback?
-                    </p>
-                    <div class="metric-target">
-                      <span class="target-label">Elite:</span> 0-15%<br />
-                      <span class="target-label">High:</span> 16-30%<br />
-                      <span class="target-label">Medium:</span> 31-45%<br />
-                      <span class="target-label">Low:</span> 46-100%
-                    </div>
-                  </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Time to Restore Service</strong>
-                    </div>
-                    <p>
-                      How long does it take to recover from a failure in
-                      production?
-                    </p>
-                    <div class="metric-target">
-                      <span class="target-label">Elite:</span> Less than one
-                      hour<br />
-                      <span class="target-label">High:</span> Less than one
-                      day<br />
-                      <span class="target-label">Medium:</span> Between one day
-                      and one week<br />
-                      <span class="target-label">Low:</span> More than one week
-                    </div>
-                  </div>
+                <div class="example-box">
+                  <strong>User-Facing Epic:</strong><br />
+                  <strong>Title:</strong> Mobile App Experience<br />
+                  <strong>Description:</strong> Develop a native mobile
+                  application that enables customers to access core services on
+                  iOS and Android devices, providing a seamless on-the-go
+                  experience.<br /><br />
+                  <strong>Success Criteria:</strong>
+                  <ul style="margin-top: 8px; font-size: 0.9rem">
+                    <li>App available on iOS and Android app stores</li>
+                    <li>
+                      50% of active users adopt mobile app within 6 months
+                    </li>
+                    <li>Mobile user satisfaction score above 4.5/5</li>
+                  </ul>
                 </div>
 
-                <div class="metric-insight">
-                  <strong>Why These Matter:</strong> DORA metrics measure both
-                  throughput (deployment frequency, lead time) and stability
-                  (change failure rate, time to restore). High-performing teams
-                  excel at both, showing that speed and stability are not
-                  trade-offs.
+                <div class="example-box" style="margin-top: 15px">
+                  <strong>Technical Epic:</strong><br />
+                  <strong>Title:</strong> Microservices Architecture
+                  Migration<br />
+                  <strong>Description:</strong> Transition from monolithic
+                  architecture to microservices to improve scalability,
+                  deployment flexibility, and team autonomy.<br /><br />
+                  <strong>Success Criteria:</strong>
+                  <ul style="margin-top: 8px; font-size: 0.9rem">
+                    <li>Core services decomposed into 8-10 microservices</li>
+                    <li>Independent deployment capability for each service</li>
+                    <li>System maintains 99.9% uptime during migration</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <div class="metric-card toc-card">
-              <div class="metric-header">
-                <span class="metric-icon">
-                  <img src="assets/constraints.png" alt="Constraints" />
+            <div class="work-item-card story-card">
+              <div class="work-item-header">
+                <span class="work-item-icon">
+                  <img
+                    src="assets/user_story.png"
+                    alt="User Story - deliverable feature within one sprint"
+                    loading="lazy"
+                  />
                 </span>
-                <h3>Theory of Constraints Metrics</h3>
-                <span class="metric-badge">Bottleneck Analysis</span>
+                <h3>User Stories</h3>
+                <span class="work-item-badge">Sprint Level</span>
               </div>
-              <div class="metric-content">
-                <h4>What is Theory of Constraints?</h4>
+              <div class="work-item-content">
+                <h4>What is a User Story?</h4>
                 <p>
-                  Theory of Constraints (ToC) focuses on identifying and
-                  managing the bottleneck (constraint) in your system. The
-                  constraint determines the maximum throughput of your entire
-                  delivery process.
+                  A small, deliverable piece of functionality that delivers
+                  value. Stories should be completable within a single sprint
+                  and can represent both user-facing features and technical
+                  work.
                 </p>
 
-                <h4>Key Principles:</h4>
+                <h4>Best Practices:</h4>
+                <ul>
+                  <li>Keep stories concise with clear value proposition</li>
+                  <li>
+                    Follow INVEST criteria (Independent, Negotiable, Valuable,
+                    Estimable, Small, Testable)
+                  </li>
+                  <li>Include clear acceptance criteria</li>
+                  <li>Keep them small enough for one sprint</li>
+                  <li>Focus on outcomes and value delivered</li>
+                </ul>
+
+                <div class="example-box">
+                  <strong>User-Facing Story:</strong><br />
+                  <strong>Title:</strong> Password Reset via Email<br />
+                  <strong>Description:</strong> Enable users to reset their
+                  password through email verification to regain account access
+                  when forgotten.<br /><br />
+                  <strong>Acceptance Criteria:</strong>
+                  <ul style="margin-top: 8px; font-size: 0.9rem">
+                    <li>User receives reset email within 5 minutes</li>
+                    <li>Reset link expires after 24 hours</li>
+                    <li>Password must meet security requirements</li>
+                    <li>User is notified of successful password change</li>
+                  </ul>
+                </div>
+
+                <div class="example-box" style="margin-top: 15px">
+                  <strong>Technical Story:</strong><br />
+                  <strong>Title:</strong> Migrate Database to PostgreSQL 15<br />
+                  <strong>Description:</strong> Upgrade the production database
+                  from PostgreSQL 13 to PostgreSQL 15 to gain performance
+                  improvements and security updates.<br /><br />
+                  <strong>Acceptance Criteria:</strong>
+                  <ul style="margin-top: 8px; font-size: 0.9rem">
+                    <li>Zero data loss during migration</li>
+                    <li>All existing queries function correctly</li>
+                    <li>
+                      Performance benchmarks meet or exceed current levels
+                    </li>
+                    <li>Rollback plan tested and documented</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="work-item-card task-card">
+              <div class="work-item-header">
+                <span class="work-item-icon">
+                  <img
+                    src="assets/task.png"
+                    alt="Task - specific implementation work for a story"
+                    loading="lazy"
+                  />
+                </span>
+                <h3>Tasks</h3>
+                <span class="work-item-badge">Implementation</span>
+              </div>
+              <div class="work-item-content">
+                <h4>What is a Task?</h4>
+                <p>
+                  Technical work items that break down a story into actionable
+                  steps. Tasks represent the "how" of implementing a story.
+                </p>
+
+                <h4>Best Practices:</h4>
+                <ul>
+                  <li>Be specific and actionable</li>
+                  <li>Keep scope manageable and focused</li>
+                  <li>Assign to a single person</li>
+                  <li>Include technical details and approach</li>
+                  <li>Can be created during sprint planning or execution</li>
+                </ul>
+
+                <div class="example-box">
+                  <strong>Examples:</strong>
+                  <ul style="margin-top: 8px">
+                    <li>Create password reset API endpoint</li>
+                    <li>Design email template for reset link</li>
+                    <li>Implement token generation and validation</li>
+                    <li>Write unit tests for password reset flow</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="work-item-card subtask-card">
+              <div class="work-item-header">
+                <span class="work-item-icon">
+                  <img
+                    src="assets/sub_task.png"
+                    alt="Sub-task - granular step breaking down a task"
+                    loading="lazy"
+                  />
+                </span>
+                <h3>Sub-tasks</h3>
+                <span class="work-item-badge">Granular Steps</span>
+              </div>
+              <div class="work-item-content">
+                <h4>What is a Sub-task?</h4>
+                <p>
+                  Very small, specific pieces of work that break down a task
+                  further. Used when a task needs additional detail or tracking.
+                </p>
+
+                <h4>Best Practices:</h4>
+                <ul>
+                  <li>Extremely specific and granular</li>
+                  <li>Keep scope very small and focused</li>
+                  <li>Use when task complexity requires it</li>
+                  <li>Keep the hierarchy shallow (avoid over-nesting)</li>
+                </ul>
+
+                <div class="example-box">
+                  <strong
+                    >Examples for "Create password reset API endpoint":</strong
+                  >
+                  <ul style="margin-top: 8px">
+                    <li>Set up route handler</li>
+                    <li>Add input validation</li>
+                    <li>Integrate with email service</li>
+                    <li>Add error handling</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hierarchy-visual">
+            <h3
+              style="
+                color: var(--primary);
+                margin-bottom: 20px;
+                text-align: center;
+              "
+            >
+              Work Item Hierarchy
+            </h3>
+            <div class="hierarchy-flow">
+              <div class="hierarchy-item">
+                <div class="hierarchy-box epic-box">Epic</div>
+                <div class="hierarchy-label">Large initiative</div>
+              </div>
+              <div class="hierarchy-arrow">→</div>
+              <div class="hierarchy-item">
+                <div class="hierarchy-box story-box">Story</div>
+                <div class="hierarchy-label">Deliverable unit</div>
+              </div>
+              <div class="hierarchy-arrow">→</div>
+              <div class="hierarchy-item">
+                <div class="hierarchy-box task-box">Task</div>
+                <div class="hierarchy-label">Implementation step</div>
+              </div>
+              <div class="hierarchy-arrow">→</div>
+              <div class="hierarchy-item">
+                <div class="hierarchy-box subtask-box">Sub-task</div>
+                <div class="hierarchy-label">Granular step</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="documentation">
+          <h2>Technical Documentation: PRD & RFC</h2>
+          <p>
+            Product Requirement Documents (PRDs) and Requests for Comments
+            (RFCs) are essential tools for aligning teams, documenting
+            decisions, and ensuring quality in product and technical
+            development.
+          </p>
+
+          <div class="doc-grid">
+            <div class="doc-card prd-card">
+              <div class="doc-header">
+                <span class="doc-icon">
+                  <img
+                    src="assets/prd.png"
+                    alt="PRD - Product Requirement Document defining what to build"
+                    loading="lazy"
+                  />
+                </span>
+                <h3>PRD (Product Requirement Document)</h3>
+              </div>
+              <div class="doc-content">
+                <h4>What is a PRD?</h4>
+                <p>
+                  A comprehensive document that defines the product
+                  requirements, user needs, success metrics, and scope for a
+                  feature or initiative. PRDs are typically written before
+                  development begins and serve as the source of truth for what
+                  will be built.
+                </p>
+
+                <h4>When to Write a PRD:</h4>
+                <ul>
+                  <li>Before starting work on significant new features</li>
+                  <li>When launching new products or major initiatives</li>
+                  <li>For features requiring cross-team coordination</li>
+                  <li>
+                    When the scope and requirements need formal documentation
+                  </li>
+                </ul>
+
+                <h4>Best Practices:</h4>
                 <ul>
                   <li>
-                    Every system has at least one constraint limiting its
-                    performance
+                    <strong>Start with the problem:</strong> Clearly articulate
+                    the user problem or business need being addressed
                   </li>
                   <li>
-                    Improving anything other than the constraint is an illusion
+                    <strong>Define success metrics:</strong> Establish
+                    measurable goals and KPIs upfront
                   </li>
-                  <li>The constraint determines overall system throughput</li>
+                  <li>
+                    <strong>Be specific about scope:</strong> Clearly state
+                    what's in scope and what's explicitly out of scope
+                  </li>
+                  <li>
+                    <strong>Include user stories:</strong> Provide concrete
+                    examples of how users will interact with the feature
+                  </li>
+                  <li>
+                    <strong>Add mockups/wireframes:</strong> Visual
+                    representations help align understanding
+                  </li>
+                  <li>
+                    <strong>Document assumptions:</strong> List key assumptions
+                    and dependencies
+                  </li>
+                  <li>
+                    <strong>Consider edge cases:</strong> Think through error
+                    states and boundary conditions
+                  </li>
+                  <li>
+                    <strong>Keep it living:</strong> Update the PRD as
+                    requirements evolve
+                  </li>
                 </ul>
 
-                <div class="metric-list">
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Throughput</strong>
+                <div class="doc-structure">
+                  <h4>Typical PRD Structure:</h4>
+                  <div class="structure-list">
+                    <div class="structure-item">
+                      <span class="structure-number">1</span>
+                      <div>
+                        <strong>Overview & Context</strong>
+                        <p>Background, problem statement, and goals</p>
+                      </div>
                     </div>
-                    <p>
-                      The rate at which the system generates value (e.g.,
-                      completed stories per sprint, features shipped per month).
-                    </p>
-                    <div class="metric-example">
-                      <strong>Example:</strong> If your team completes 20 story
-                      points per sprint consistently, your throughput is 20
-                      points/sprint.
+                    <div class="structure-item">
+                      <span class="structure-number">2</span>
+                      <div>
+                        <strong>User Personas & Stories</strong>
+                        <p>Target users and their use cases</p>
+                      </div>
+                    </div>
+                    <div class="structure-item">
+                      <span class="structure-number">3</span>
+                      <div>
+                        <strong>Requirements</strong>
+                        <p>Functional and non-functional requirements</p>
+                      </div>
+                    </div>
+                    <div class="structure-item">
+                      <span class="structure-number">4</span>
+                      <div>
+                        <strong>Success Metrics</strong>
+                        <p>KPIs and measurement criteria</p>
+                      </div>
+                    </div>
+                    <div class="structure-item">
+                      <span class="structure-number">5</span>
+                      <div>
+                        <strong>Design & Mockups</strong>
+                        <p>Visual representation of the solution</p>
+                      </div>
+                    </div>
+                    <div class="structure-item">
+                      <span class="structure-number">6</span>
+                      <div>
+                        <strong>Out of Scope</strong>
+                        <p>What will NOT be included</p>
+                      </div>
+                    </div>
+                    <div class="structure-item">
+                      <span class="structure-number">7</span>
+                      <div>
+                        <strong>Timeline & Dependencies</strong>
+                        <p>Key milestones and blockers</p>
+                      </div>
                     </div>
                   </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Work In Progress (WIP)</strong>
-                    </div>
-                    <p>
-                      The number of items currently being worked on. High WIP
-                      often indicates a constraint or bottleneck.
-                    </p>
-                    <div class="metric-example">
-                      <strong>Watch for:</strong> Work piling up before certain
-                      stages (e.g., code review, QA, deployment) indicates a
-                      constraint at that stage.
-                    </div>
-                  </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Constraint Utilization</strong>
-                    </div>
-                    <p>
-                      How effectively is the bottleneck being used? Any idle
-                      time at the constraint wastes total system capacity.
-                    </p>
-                    <div class="metric-example">
-                      <strong>Goal:</strong> Keep the constraint at 100%
-                      utilization. Protect it from starvation by ensuring
-                      upstream work is always ready.
-                    </div>
-                  </div>
-                </div>
-
-                <div class="metric-insight">
-                  <strong>How to Apply:</strong> Identify your constraint (where
-                  work queues up), ensure it's never idle, subordinate
-                  everything else to the constraint, elevate the constraint's
-                  capacity, and repeat as the constraint moves.
                 </div>
               </div>
             </div>
 
-            <div class="metric-card kanban-card">
-              <div class="metric-header">
-                <span class="metric-icon">
-                  <img src="assets/flow.png" alt="Flow" />
+            <div class="doc-card rfc-card">
+              <div class="doc-header">
+                <span class="doc-icon">
+                  <img
+                    src="assets/rfc.png"
+                    alt="RFC - Request for Comments proposing technical solutions"
+                    loading="lazy"
+                  />
                 </span>
-                <h3>Kanban Flow Metrics</h3>
-                <span class="metric-badge">Flow Efficiency</span>
+                <h3>RFC (Request for Comments)</h3>
               </div>
-              <div class="metric-content">
-                <h4>What are Kanban Metrics?</h4>
+              <div class="doc-content">
+                <h4>What is an RFC?</h4>
                 <p>
-                  Kanban metrics focus on flow efficiency and predictability.
-                  They help teams understand how work moves through their system
-                  and identify opportunities for improvement.
+                  A technical design document that proposes a solution,
+                  architecture, or approach for solving a problem. RFCs invite
+                  feedback and discussion from the team before implementation,
+                  promoting collaborative decision-making and knowledge sharing.
                 </p>
 
-                <div class="metric-list">
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Cycle Time</strong>
+                <h4>When to Write an RFC:</h4>
+                <ul>
+                  <li>Before making significant architectural decisions</li>
+                  <li>When introducing new technologies or frameworks</li>
+                  <li>For changes that impact multiple teams or systems</li>
+                  <li>When multiple solution approaches are possible</li>
+                  <li>To document and socialize technical decisions</li>
+                </ul>
+
+                <h4>Best Practices:</h4>
+                <ul>
+                  <li>
+                    <strong>State the problem clearly:</strong> Explain what
+                    problem you're solving and why it matters
+                  </li>
+                  <li>
+                    <strong>Propose concrete solutions:</strong> Present one or
+                    more specific approaches with trade-offs
+                  </li>
+                  <li>
+                    <strong>Compare alternatives:</strong> Evaluate different
+                    options objectively
+                  </li>
+                  <li>
+                    <strong>Include diagrams:</strong> Architecture diagrams,
+                    flow charts, and sequence diagrams clarify complex concepts
+                  </li>
+                  <li>
+                    <strong>Address concerns proactively:</strong> Anticipate
+                    questions about performance, security, scalability
+                  </li>
+                  <li>
+                    <strong>Set a review timeline:</strong> Give reviewers a
+                    clear deadline for feedback
+                  </li>
+                  <li>
+                    <strong>Invite diverse perspectives:</strong> Seek input
+                    from different roles and teams
+                  </li>
+                  <li>
+                    <strong>Document the decision:</strong> Record what was
+                    decided and why
+                  </li>
+                </ul>
+
+                <div class="doc-structure">
+                  <h4>Typical RFC Structure:</h4>
+                  <div class="structure-list">
+                    <div class="structure-item">
+                      <span class="structure-number">1</span>
+                      <div>
+                        <strong>Summary</strong>
+                        <p>High-level overview in 2-3 sentences</p>
+                      </div>
                     </div>
-                    <p>
-                      The total time from when work starts until it's completed
-                      and delivered. This is your primary measure of speed.
-                    </p>
-                    <div class="metric-example">
-                      <strong>Measure:</strong> From "In Progress" to "Done"<br />
-                      <strong>Track:</strong> Average, median, and percentiles
-                      (85th, 95th)
+                    <div class="structure-item">
+                      <span class="structure-number">2</span>
+                      <div>
+                        <strong>Problem Statement</strong>
+                        <p>What problem are we solving and why</p>
+                      </div>
+                    </div>
+                    <div class="structure-item">
+                      <span class="structure-number">3</span>
+                      <div>
+                        <strong>Proposed Solution</strong>
+                        <p>Detailed technical approach</p>
+                      </div>
+                    </div>
+                    <div class="structure-item">
+                      <span class="structure-number">4</span>
+                      <div>
+                        <strong>Alternative Approaches</strong>
+                        <p>Other options considered and why not chosen</p>
+                      </div>
+                    </div>
+                    <div class="structure-item">
+                      <span class="structure-number">5</span>
+                      <div>
+                        <strong>Trade-offs & Risks</strong>
+                        <p>Downsides and mitigation strategies</p>
+                      </div>
+                    </div>
+                    <div class="structure-item">
+                      <span class="structure-number">6</span>
+                      <div>
+                        <strong>Implementation Plan</strong>
+                        <p>Rollout strategy and phases</p>
+                      </div>
+                    </div>
+                    <div class="structure-item">
+                      <span class="structure-number">7</span>
+                      <div>
+                        <strong>Open Questions</strong>
+                        <p>Areas where feedback is specifically needed</p>
+                      </div>
                     </div>
                   </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Lead Time</strong>
-                    </div>
-                    <p>
-                      The total time from when a request is made until it's
-                      delivered. Includes time waiting to start.
-                    </p>
-                    <div class="metric-example">
-                      <strong>Measure:</strong> From "Backlog" to "Done"<br />
-                      <strong>Customer perspective:</strong> This is what users
-                      experience
-                    </div>
-                  </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Work In Progress (WIP)</strong>
-                    </div>
-                    <p>
-                      The number of items actively being worked on. Lower WIP
-                      typically leads to faster cycle times.
-                    </p>
-                    <div class="metric-example">
-                      <strong>Little's Law:</strong> Average Cycle Time = WIP /
-                      Throughput<br />
-                      <strong>Action:</strong> Set WIP limits per column to
-                      reduce context switching
-                    </div>
-                  </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Throughput</strong>
-                    </div>
-                    <p>
-                      The number of items completed per unit of time. Measure of
-                      delivery rate.
-                    </p>
-                    <div class="metric-example">
-                      <strong>Track:</strong> Items per week/sprint<br />
-                      <strong>Use for:</strong> Capacity planning and
-                      forecasting
-                    </div>
-                  </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Flow Efficiency</strong>
-                    </div>
-                    <p>
-                      The percentage of time work is actively being worked on
-                      vs. waiting. Most teams have 10-20% flow efficiency.
-                    </p>
-                    <div class="metric-example">
-                      <strong>Formula:</strong> (Active Time / Total Lead Time)
-                      × 100<br />
-                      <strong>Improve by:</strong> Reducing wait times,
-                      handoffs, and blockers
-                    </div>
-                  </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Blocked Time</strong>
-                    </div>
-                    <p>
-                      How much time items spend blocked or waiting on external
-                      dependencies.
-                    </p>
-                    <div class="metric-example">
-                      <strong>Track:</strong> Number of blocked items, average
-                      block duration<br />
-                      <strong>Use to:</strong> Identify systemic issues and
-                      external dependencies
-                    </div>
-                  </div>
-                </div>
-
-                <div class="metric-insight">
-                  <strong>Cumulative Flow Diagram (CFD):</strong> Visualize WIP,
-                  throughput, and cycle time trends over time. A stable CFD
-                  shows consistent flow; expanding bands indicate growing WIP or
-                  bottlenecks.
-                </div>
-              </div>
-            </div>
-
-            <div class="metric-card scrum-card">
-              <div class="metric-header">
-                <span class="metric-icon">
-                  <img src="assets/sprint_metrics.png" alt="Sprint Metrics" />
-                </span>
-                <h3>Sprint Metrics</h3>
-                <span class="metric-badge">Planning & Delivery</span>
-              </div>
-              <div class="metric-content">
-                <h4>What are Sprint Metrics?</h4>
-                <p>
-                  Sprint metrics help teams plan capacity, track delivery
-                  consistency, and improve estimation accuracy. These metrics
-                  support velocity-based planning and predictable delivery.
-                </p>
-
-                <div class="metric-list">
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Velocity</strong>
-                    </div>
-                    <p>
-                      The average number of story points completed per sprint.
-                      Used for capacity planning and forecasting.
-                    </p>
-                    <div class="metric-example">
-                      <strong>Calculate:</strong> Sum story points completed
-                      over last 3-5 sprints, then divide by number of sprints<br />
-                      <strong>Use for:</strong> Planning how much work to commit
-                      to in upcoming sprints<br />
-                      <strong>Note:</strong> Velocity is team-specific and
-                      should never be compared across teams
-                    </div>
-                  </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Commitment vs Completion</strong>
-                    </div>
-                    <p>
-                      Comparison between story points committed at sprint
-                      planning vs actually completed by sprint end.
-                    </p>
-                    <div class="metric-example">
-                      <strong>Ideal:</strong> 90-100% completion rate
-                      consistently<br />
-                      <strong>If consistently low:</strong> Team is
-                      over-committing or stories are poorly estimated<br />
-                      <strong>If consistently 100%:</strong> Team may be
-                      under-committing and could take on more
-                    </div>
-                  </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Sprint Goal Success Rate</strong>
-                    </div>
-                    <p>
-                      Percentage of sprints where the sprint goal was achieved,
-                      regardless of all stories being completed.
-                    </p>
-                    <div class="metric-example">
-                      <strong>Track:</strong> Did we achieve what we set out to
-                      accomplish?<br />
-                      <strong>Why it matters:</strong> Focuses on outcomes over
-                      output<br />
-                      <strong>Target:</strong> 80%+ sprint goal achievement
-                    </div>
-                  </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Story Point Distribution</strong>
-                    </div>
-                    <p>
-                      Breakdown of completed stories by size (e.g., 1, 2, 3, 5,
-                      8, 13 points).
-                    </p>
-                    <div class="metric-example">
-                      <strong>Watch for:</strong> Too many large stories may
-                      indicate insufficient refinement<br />
-                      <strong>Healthy mix:</strong> Majority of stories should
-                      be small to medium (1-5 points)<br />
-                      <strong>Action:</strong> Break down 8+ point stories
-                      during refinement
-                    </div>
-                  </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Scope Change</strong>
-                    </div>
-                    <p>
-                      Number of stories added or removed mid-sprint after
-                      planning.
-                    </p>
-                    <div class="metric-example">
-                      <strong>Track:</strong> How often does scope change during
-                      the sprint?<br />
-                      <strong>Frequent changes indicate:</strong> Poor planning,
-                      unclear priorities, or external disruptions<br />
-                      <strong>Goal:</strong> Minimize scope changes to maintain
-                      team focus
-                    </div>
-                  </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Estimation Accuracy</strong>
-                    </div>
-                    <p>
-                      How closely actual effort matches estimated story points
-                      over time.
-                    </p>
-                    <div class="metric-example">
-                      <strong>Improve through:</strong> Regular refinement
-                      sessions and retrospective discussions<br />
-                      <strong>Watch for:</strong> Consistently over or
-                      under-estimated story sizes<br />
-                      <strong>Remember:</strong> Story points are relative
-                      sizing, not precise time estimates
-                    </div>
-                  </div>
-
-                  <div class="metric-item">
-                    <div class="metric-name">
-                      <span class="metric-dot"></span>
-                      <strong>Sprint Burndown</strong>
-                    </div>
-                    <p>
-                      Visual chart showing remaining work (story points)
-                      throughout the sprint.
-                    </p>
-                    <div class="metric-example">
-                      <strong>Ideal pattern:</strong> Steady downward slope from
-                      sprint start to end<br />
-                      <strong>Flat line:</strong> Work isn't being completed,
-                      may indicate blockers<br />
-                      <strong>Spike up:</strong> Scope was added mid-sprint<br />
-                      <strong>Use daily:</strong> Quick visual check during
-                      standup
-                    </div>
-                  </div>
-                </div>
-
-                <div class="metric-insight">
-                  <strong>Velocity Best Practices:</strong> Don't use velocity
-                  as a performance metric or to compare teams. Velocity
-                  naturally varies as team composition, technology, and story
-                  point calibration differ. Use it solely for the team's own
-                  capacity planning and to identify trends in their delivery
-                  patterns.
                 </div>
               </div>
             </div>
           </div>
-          <!-- end metrics-grid -->
-        </div>
-        <!-- end metrics-scroll-wrapper -->
 
-        <div class="metrics-summary">
-          <h3
-            style="
-              color: var(--primary);
-              margin-bottom: 25px;
-              text-align: center;
-            "
-          >
-            Using Metrics Together
-          </h3>
-          <div class="summary-grid">
-            <div class="summary-item">
-              <h4>📊 Plan Capacity</h4>
-              <p>
-                Use Sprint metrics (velocity, commitment) to plan realistic
-                sprint commitments based on team capacity and historical
-                performance.
-              </p>
+          <div class="doc-comparison">
+            <h3
+              style="
+                color: var(--primary);
+                margin-bottom: 25px;
+                text-align: center;
+              "
+            >
+              PRD vs RFC: When to Use Each
+            </h3>
+            <div class="comparison-grid">
+              <div class="comparison-item">
+                <h4 style="color: var(--purple)">PRD</h4>
+                <ul>
+                  <li><strong>Focus:</strong> What to build and why</li>
+                  <li>
+                    <strong>Audience:</strong> Product managers, stakeholders,
+                    entire team
+                  </li>
+                  <li><strong>Perspective:</strong> User and business needs</li>
+                  <li>
+                    <strong>Detail Level:</strong> Requirements and expected
+                    behavior
+                  </li>
+                  <li>
+                    <strong>Example:</strong> "Build a two-factor authentication
+                    feature"
+                  </li>
+                </ul>
+              </div>
+              <div class="comparison-item">
+                <h4 style="color: var(--primary)">RFC</h4>
+                <ul>
+                  <li><strong>Focus:</strong> How to build it technically</li>
+                  <li>
+                    <strong>Audience:</strong> Engineers, architects, technical
+                    teams
+                  </li>
+                  <li>
+                    <strong>Perspective:</strong> Technical implementation
+                  </li>
+                  <li>
+                    <strong>Detail Level:</strong> Architecture, systems,
+                    technologies
+                  </li>
+                  <li>
+                    <strong>Example:</strong> "Use TOTP protocol for 2FA
+                    implementation"
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="summary-item">
-              <h4>🎯 Understand Flow</h4>
-              <p>
-                Use Kanban metrics to understand your delivery flow, identify
-                where work gets stuck, and establish baseline cycle times.
-              </p>
-            </div>
-            <div class="summary-item">
-              <h4>🔍 Find Constraints</h4>
-              <p>
-                Apply Theory of Constraints thinking to identify your bottleneck
-                and focus improvement efforts where they'll have the most
-                impact.
-              </p>
-            </div>
-            <div class="summary-item">
-              <h4>📈 Measure Outcomes</h4>
-              <p>
-                Track DORA metrics to measure overall DevOps performance and
-                ensure process improvements translate to better delivery
-                outcomes.
-              </p>
-            </div>
-            <div class="summary-item">
-              <h4>🔄 Iterate Continuously</h4>
-              <p>
-                Review all metrics regularly in retrospectives. Use data to
-                drive experiments and validate that changes actually improve
-                performance.
-              </p>
-            </div>
+            <p
+              style="
+                text-align: center;
+                margin-top: 25px;
+                color: #8892b0;
+                font-size: 0.95rem;
+              "
+            >
+              <strong>Tip:</strong> Many initiatives benefit from both a PRD
+              (defining requirements) and an RFC (defining technical approach)
+            </p>
           </div>
-          <p
-            style="
-              text-align: center;
-              margin-top: 30px;
-              color: #8892b0;
-              font-size: 0.95rem;
-            "
-          >
-            <strong>Remember:</strong> Metrics are tools for learning and
-            improvement, not goals in themselves. Focus on trends and continuous
-            improvement rather than hitting specific numbers. Never use velocity
-            or story points to compare teams or measure individual performance.
+        </section>
+
+        <section id="metrics">
+          <h2>Continuous Improvement Metrics</h2>
+          <p>
+            Measuring the right metrics helps teams identify opportunities for
+            improvement, track progress, and make data-driven decisions. These
+            metrics provide visibility into delivery speed, quality, and flow
+            efficiency to drive continuous improvement.
           </p>
-        </div>
-      </section>
+
+          <div class="metrics-scroll-wrapper">
+            <div class="metrics-scroll-container">
+              <button
+                class="metrics-scroll-btn metrics-scroll-btn-left"
+                id="metricsScrollLeft"
+                aria-label="Scroll to previous metric"
+              >
+                <img src="assets/arrow.png" alt="" loading="lazy" />
+              </button>
+              <button
+                class="metrics-scroll-btn metrics-scroll-btn-right"
+                id="metricsScrollRight"
+                aria-label="Scroll to next metric"
+              >
+                <img src="assets/arrow.png" alt="" loading="lazy" />
+              </button>
+            </div>
+            <div class="metrics-grid">
+              <div class="metric-card dora-card">
+                <div class="metric-header">
+                  <span class="metric-icon">
+                    <img
+                      src="assets/dora.png"
+                      alt="DORA Metrics - DevOps Research and Assessment performance indicators"
+                      loading="lazy"
+                    />
+                  </span>
+                  <h3>DORA Metrics</h3>
+                  <span class="metric-badge">DevOps Performance</span>
+                </div>
+                <div class="metric-content">
+                  <h4>What are DORA Metrics?</h4>
+                  <p>
+                    DORA (DevOps Research and Assessment) metrics are four key
+                    measures that indicate the performance of software delivery
+                    teams. Research shows these metrics are strong predictors of
+                    organizational performance.
+                  </p>
+
+                  <div class="metric-list">
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Deployment Frequency</strong>
+                      </div>
+                      <p>How often does your team deploy code to production?</p>
+                      <div class="metric-target">
+                        <span class="target-label">Elite:</span> Multiple
+                        deployments per day<br />
+                        <span class="target-label">High:</span> Between once per
+                        day and once per week<br />
+                        <span class="target-label">Medium:</span> Between once
+                        per week and once per month<br />
+                        <span class="target-label">Low:</span> Less than once
+                        per month
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Lead Time for Changes</strong>
+                      </div>
+                      <p>
+                        How long does it take from code commit to code running
+                        in production?
+                      </p>
+                      <div class="metric-target">
+                        <span class="target-label">Elite:</span> Less than one
+                        hour<br />
+                        <span class="target-label">High:</span> Between one day
+                        and one week<br />
+                        <span class="target-label">Medium:</span> Between one
+                        week and one month<br />
+                        <span class="target-label">Low:</span> More than one
+                        month
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Change Failure Rate</strong>
+                      </div>
+                      <p>
+                        What percentage of deployments cause a failure in
+                        production requiring hotfix or rollback?
+                      </p>
+                      <div class="metric-target">
+                        <span class="target-label">Elite:</span> 0-15%<br />
+                        <span class="target-label">High:</span> 16-30%<br />
+                        <span class="target-label">Medium:</span> 31-45%<br />
+                        <span class="target-label">Low:</span> 46-100%
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Time to Restore Service</strong>
+                      </div>
+                      <p>
+                        How long does it take to recover from a failure in
+                        production?
+                      </p>
+                      <div class="metric-target">
+                        <span class="target-label">Elite:</span> Less than one
+                        hour<br />
+                        <span class="target-label">High:</span> Less than one
+                        day<br />
+                        <span class="target-label">Medium:</span> Between one
+                        day and one week<br />
+                        <span class="target-label">Low:</span> More than one
+                        week
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="metric-insight">
+                    <strong>Why These Matter:</strong> DORA metrics measure both
+                    throughput (deployment frequency, lead time) and stability
+                    (change failure rate, time to restore). High-performing
+                    teams excel at both, showing that speed and stability are
+                    not trade-offs.
+                  </div>
+                </div>
+              </div>
+
+              <div class="metric-card toc-card">
+                <div class="metric-header">
+                  <span class="metric-icon">
+                    <img
+                      src="assets/constraints.png"
+                      alt="Theory of Constraints - identifying and managing bottlenecks"
+                      loading="lazy"
+                    />
+                  </span>
+                  <h3>Theory of Constraints Metrics</h3>
+                  <span class="metric-badge">Bottleneck Analysis</span>
+                </div>
+                <div class="metric-content">
+                  <h4>What is Theory of Constraints?</h4>
+                  <p>
+                    Theory of Constraints (ToC) focuses on identifying and
+                    managing the bottleneck (constraint) in your system. The
+                    constraint determines the maximum throughput of your entire
+                    delivery process.
+                  </p>
+
+                  <h4>Key Principles:</h4>
+                  <ul>
+                    <li>
+                      Every system has at least one constraint limiting its
+                      performance
+                    </li>
+                    <li>
+                      Improving anything other than the constraint is an
+                      illusion
+                    </li>
+                    <li>The constraint determines overall system throughput</li>
+                  </ul>
+
+                  <div class="metric-list">
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Throughput</strong>
+                      </div>
+                      <p>
+                        The rate at which the system generates value (e.g.,
+                        completed stories per sprint, features shipped per
+                        month).
+                      </p>
+                      <div class="metric-example">
+                        <strong>Example:</strong> If your team completes 20
+                        story points per sprint consistently, your throughput is
+                        20 points/sprint.
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Work In Progress (WIP)</strong>
+                      </div>
+                      <p>
+                        The number of items currently being worked on. High WIP
+                        often indicates a constraint or bottleneck.
+                      </p>
+                      <div class="metric-example">
+                        <strong>Watch for:</strong> Work piling up before
+                        certain stages (e.g., code review, QA, deployment)
+                        indicates a constraint at that stage.
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Constraint Utilization</strong>
+                      </div>
+                      <p>
+                        How effectively is the bottleneck being used? Any idle
+                        time at the constraint wastes total system capacity.
+                      </p>
+                      <div class="metric-example">
+                        <strong>Goal:</strong> Keep the constraint at 100%
+                        utilization. Protect it from starvation by ensuring
+                        upstream work is always ready.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="metric-insight">
+                    <strong>How to Apply:</strong> Identify your constraint
+                    (where work queues up), ensure it's never idle, subordinate
+                    everything else to the constraint, elevate the constraint's
+                    capacity, and repeat as the constraint moves.
+                  </div>
+                </div>
+              </div>
+
+              <div class="metric-card kanban-card">
+                <div class="metric-header">
+                  <span class="metric-icon">
+                    <img
+                      src="assets/flow.png"
+                      alt="Kanban Flow - visualizing and optimizing work flow"
+                      loading="lazy"
+                    />
+                  </span>
+                  <h3>Kanban Flow Metrics</h3>
+                  <span class="metric-badge">Flow Efficiency</span>
+                </div>
+                <div class="metric-content">
+                  <h4>What are Kanban Metrics?</h4>
+                  <p>
+                    Kanban metrics focus on flow efficiency and predictability.
+                    They help teams understand how work moves through their
+                    system and identify opportunities for improvement.
+                  </p>
+
+                  <div class="metric-list">
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Cycle Time</strong>
+                      </div>
+                      <p>
+                        The total time from when work starts until it's
+                        completed and delivered. This is your primary measure of
+                        speed.
+                      </p>
+                      <div class="metric-example">
+                        <strong>Measure:</strong> From "In Progress" to
+                        "Done"<br />
+                        <strong>Track:</strong> Average, median, and percentiles
+                        (85th, 95th)
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Lead Time</strong>
+                      </div>
+                      <p>
+                        The total time from when a request is made until it's
+                        delivered. Includes time waiting to start.
+                      </p>
+                      <div class="metric-example">
+                        <strong>Measure:</strong> From "Backlog" to "Done"<br />
+                        <strong>Customer perspective:</strong> This is what
+                        users experience
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Work In Progress (WIP)</strong>
+                      </div>
+                      <p>
+                        The number of items actively being worked on. Lower WIP
+                        typically leads to faster cycle times.
+                      </p>
+                      <div class="metric-example">
+                        <strong>Little's Law:</strong> Average Cycle Time = WIP
+                        / Throughput<br />
+                        <strong>Action:</strong> Set WIP limits per column to
+                        reduce context switching
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Throughput</strong>
+                      </div>
+                      <p>
+                        The number of items completed per unit of time. Measure
+                        of delivery rate.
+                      </p>
+                      <div class="metric-example">
+                        <strong>Track:</strong> Items per week/sprint<br />
+                        <strong>Use for:</strong> Capacity planning and
+                        forecasting
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Flow Efficiency</strong>
+                      </div>
+                      <p>
+                        The percentage of time work is actively being worked on
+                        vs. waiting. Most teams have 10-20% flow efficiency.
+                      </p>
+                      <div class="metric-example">
+                        <strong>Formula:</strong> (Active Time / Total Lead
+                        Time) × 100<br />
+                        <strong>Improve by:</strong> Reducing wait times,
+                        handoffs, and blockers
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Blocked Time</strong>
+                      </div>
+                      <p>
+                        How much time items spend blocked or waiting on external
+                        dependencies.
+                      </p>
+                      <div class="metric-example">
+                        <strong>Track:</strong> Number of blocked items, average
+                        block duration<br />
+                        <strong>Use to:</strong> Identify systemic issues and
+                        external dependencies
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="metric-insight">
+                    <strong>Cumulative Flow Diagram (CFD):</strong> Visualize
+                    WIP, throughput, and cycle time trends over time. A stable
+                    CFD shows consistent flow; expanding bands indicate growing
+                    WIP or bottlenecks.
+                  </div>
+                </div>
+              </div>
+
+              <div class="metric-card scrum-card">
+                <div class="metric-header">
+                  <span class="metric-icon">
+                    <img
+                      src="assets/sprint_metrics.png"
+                      alt="Sprint Metrics - velocity and capacity planning indicators"
+                      loading="lazy"
+                    />
+                  </span>
+                  <h3>Sprint Metrics</h3>
+                  <span class="metric-badge">Planning & Delivery</span>
+                </div>
+                <div class="metric-content">
+                  <h4>What are Sprint Metrics?</h4>
+                  <p>
+                    Sprint metrics help teams plan capacity, track delivery
+                    consistency, and improve estimation accuracy. These metrics
+                    support velocity-based planning and predictable delivery.
+                  </p>
+
+                  <div class="metric-list">
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Velocity</strong>
+                      </div>
+                      <p>
+                        The average number of story points completed per sprint.
+                        Used for capacity planning and forecasting.
+                      </p>
+                      <div class="metric-example">
+                        <strong>Calculate:</strong> Sum story points completed
+                        over last 3-5 sprints, then divide by number of
+                        sprints<br />
+                        <strong>Use for:</strong> Planning how much work to
+                        commit to in upcoming sprints<br />
+                        <strong>Note:</strong> Velocity is team-specific and
+                        should never be compared across teams
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Commitment vs Completion</strong>
+                      </div>
+                      <p>
+                        Comparison between story points committed at sprint
+                        planning vs actually completed by sprint end.
+                      </p>
+                      <div class="metric-example">
+                        <strong>Ideal:</strong> 90-100% completion rate
+                        consistently<br />
+                        <strong>If consistently low:</strong> Team is
+                        over-committing or stories are poorly estimated<br />
+                        <strong>If consistently 100%:</strong> Team may be
+                        under-committing and could take on more
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Sprint Goal Success Rate</strong>
+                      </div>
+                      <p>
+                        Percentage of sprints where the sprint goal was
+                        achieved, regardless of all stories being completed.
+                      </p>
+                      <div class="metric-example">
+                        <strong>Track:</strong> Did we achieve what we set out
+                        to accomplish?<br />
+                        <strong>Why it matters:</strong> Focuses on outcomes
+                        over output<br />
+                        <strong>Target:</strong> 80%+ sprint goal achievement
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Story Point Distribution</strong>
+                      </div>
+                      <p>
+                        Breakdown of completed stories by size (e.g., 1, 2, 3,
+                        5, 8, 13 points).
+                      </p>
+                      <div class="metric-example">
+                        <strong>Watch for:</strong> Too many large stories may
+                        indicate insufficient refinement<br />
+                        <strong>Healthy mix:</strong> Majority of stories should
+                        be small to medium (1-5 points)<br />
+                        <strong>Action:</strong> Break down 8+ point stories
+                        during refinement
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Scope Change</strong>
+                      </div>
+                      <p>
+                        Number of stories added or removed mid-sprint after
+                        planning.
+                      </p>
+                      <div class="metric-example">
+                        <strong>Track:</strong> How often does scope change
+                        during the sprint?<br />
+                        <strong>Frequent changes indicate:</strong> Poor
+                        planning, unclear priorities, or external disruptions<br />
+                        <strong>Goal:</strong> Minimize scope changes to
+                        maintain team focus
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Estimation Accuracy</strong>
+                      </div>
+                      <p>
+                        How closely actual effort matches estimated story points
+                        over time.
+                      </p>
+                      <div class="metric-example">
+                        <strong>Improve through:</strong> Regular refinement
+                        sessions and retrospective discussions<br />
+                        <strong>Watch for:</strong> Consistently over or
+                        under-estimated story sizes<br />
+                        <strong>Remember:</strong> Story points are relative
+                        sizing, not precise time estimates
+                      </div>
+                    </div>
+
+                    <div class="metric-item">
+                      <div class="metric-name">
+                        <span class="metric-dot"></span>
+                        <strong>Sprint Burndown</strong>
+                      </div>
+                      <p>
+                        Visual chart showing remaining work (story points)
+                        throughout the sprint.
+                      </p>
+                      <div class="metric-example">
+                        <strong>Ideal pattern:</strong> Steady downward slope
+                        from sprint start to end<br />
+                        <strong>Flat line:</strong> Work isn't being completed,
+                        may indicate blockers<br />
+                        <strong>Spike up:</strong> Scope was added mid-sprint<br />
+                        <strong>Use daily:</strong> Quick visual check during
+                        standup
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="metric-insight">
+                    <strong>Velocity Best Practices:</strong> Don't use velocity
+                    as a performance metric or to compare teams. Velocity
+                    naturally varies as team composition, technology, and story
+                    point calibration differ. Use it solely for the team's own
+                    capacity planning and to identify trends in their delivery
+                    patterns.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end metrics-grid -->
+          </div>
+          <!-- end metrics-scroll-wrapper -->
+
+          <div class="metrics-summary">
+            <h3
+              style="
+                color: var(--primary);
+                margin-bottom: 25px;
+                text-align: center;
+              "
+            >
+              Using Metrics Together
+            </h3>
+            <div class="summary-grid">
+              <div class="summary-item">
+                <h4>📊 Plan Capacity</h4>
+                <p>
+                  Use Sprint metrics (velocity, commitment) to plan realistic
+                  sprint commitments based on team capacity and historical
+                  performance.
+                </p>
+              </div>
+              <div class="summary-item">
+                <h4>🎯 Understand Flow</h4>
+                <p>
+                  Use Kanban metrics to understand your delivery flow, identify
+                  where work gets stuck, and establish baseline cycle times.
+                </p>
+              </div>
+              <div class="summary-item">
+                <h4>🔍 Find Constraints</h4>
+                <p>
+                  Apply Theory of Constraints thinking to identify your
+                  bottleneck and focus improvement efforts where they'll have
+                  the most impact.
+                </p>
+              </div>
+              <div class="summary-item">
+                <h4>📈 Measure Outcomes</h4>
+                <p>
+                  Track DORA metrics to measure overall DevOps performance and
+                  ensure process improvements translate to better delivery
+                  outcomes.
+                </p>
+              </div>
+              <div class="summary-item">
+                <h4>🔄 Iterate Continuously</h4>
+                <p>
+                  Review all metrics regularly in retrospectives. Use data to
+                  drive experiments and validate that changes actually improve
+                  performance.
+                </p>
+              </div>
+            </div>
+            <p
+              style="
+                text-align: center;
+                margin-top: 30px;
+                color: #8892b0;
+                font-size: 0.95rem;
+              "
+            >
+              <strong>Remember:</strong> Metrics are tools for learning and
+              improvement, not goals in themselves. Focus on trends and
+              continuous improvement rather than hitting specific numbers. Never
+              use velocity or story points to compare teams or measure
+              individual performance.
+            </p>
+          </div>
+        </section>
+      </main>
 
       <footer>
         <p>

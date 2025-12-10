@@ -1584,4 +1584,225 @@ footer {
   background: var(--accent);
 }
 
+/* Cookie Consent Banner */
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 3px solid var(--border);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  z-index: 10000;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.cookie-consent.show {
+  transform: translateY(0);
+}
+
+.cookie-consent-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.cookie-consent-text {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.cookie-consent-text strong {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.cookie-consent-buttons {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cookie-btn {
+  padding: 12px 24px;
+  border: 3px solid var(--border);
+  background: white;
+  font-family: "Lexend", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 0 var(--border);
+  white-space: nowrap;
+}
+
+.cookie-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--border);
+}
+
+.cookie-btn-accept {
+  background: var(--primary);
+  color: var(--text-primary);
+}
+
+.cookie-btn-accept:hover {
+  background: #f9a825;
+}
+
+.cookie-btn-decline {
+  background: white;
+  color: var(--text-secondary);
+}
+
+.cookie-btn-decline:hover {
+  background: #f5f5f5;
+}
+
+/* Cookie Modal */
+.cookie-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  padding: 20px;
+}
+
+.cookie-modal.show {
+  display: flex;
+}
+
+.cookie-modal-content {
+  background: white;
+  border: 3px solid var(--border);
+  box-shadow: 8px 8px 0 var(--border);
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalSlideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: scale(0.8) translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.cookie-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.cookie-modal-close:hover {
+  color: var(--text-primary);
+}
+
+.cookie-modal-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.cookie-modal-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.cookie-modal-content ul {
+  margin: 15px 0 15px 25px;
+  line-height: 1.8;
+}
+
+.cookie-modal-content li {
+  margin-bottom: 8px;
+}
+
+/* Cookie Settings Button */
+.cookie-settings-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+.cookie-settings-btn.show {
+  display: block;
+}
+
+.cookie-settings-btn:hover {
+  transform: translate(2px, 2px) scale(1.05);
+  box-shadow: 1px 1px 0 var(--border);
+}
+
+/* Responsive Design for Cookie Banner */
+@media (max-width: 768px) {
+  .cookie-consent-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .cookie-consent-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cookie-btn {
+    width: 100%;
+  }
+
+  .cookie-modal-content {
+    padding: 30px 20px;
+  }
+
+  .cookie-settings-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
 

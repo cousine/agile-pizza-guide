@@ -1,0 +1,11 @@
+# Allow all crawlers to access the site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://agile-pizza.cousine.me/sitemap.xml
+
+# Disallow crawling of any potential future admin or private sections
+# (currently none, but good practice)
+Disallow: /private/
+Disallow: /admin/
